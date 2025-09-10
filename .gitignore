@@ -1,5 +1,11 @@
 .idea
 venv
-.env
+.envTesting
 __pycache__/*
-data/*
+marketAnalysis/.env
+marketAnalysis/data/*
+marketAnalysis/plots/*
+marketAnalysis/venv
+marketAnalysis/__pycache__/*
+
+
