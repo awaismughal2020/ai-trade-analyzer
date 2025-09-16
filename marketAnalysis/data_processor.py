@@ -19,6 +19,7 @@ class DataProcessor:
         self.scaler = MinMaxScaler()
         self.sequence_length = int(os.getenv('SEQUENCE_LENGTH', 20))
         self.prediction_horizon = int(os.getenv('PREDICTION_HORIZON', 1))
+        self.trending_threshold = float(os.getenv('TRENDING_THRESHOLD', 0.001))
 
         # Feature columns that will be used for model training
         self.feature_columns = [
@@ -195,40 +196,42 @@ class DataProcessor:
         return result
 
     def create_labels(self, df):
-        """
-        Create trading labels based on future returns
-
-        Args:
-            df (pd.DataFrame): Data with technical indicators
-
-        Returns:
-            pd.DataFrame: Data with labels added
-        """
+        """Create trading labels based on future returns"""
         print("Creating trading labels...")
 
         labeled_dfs = []
+        trending_coins = 0
 
         for coin in df['coin_id'].unique():
             coin_df = df[df['coin_id'] == coin].copy()
             coin_df = coin_df.sort_values('timestamp')
 
+            # Check if this coin is in a trending market
+            if not self.is_trending_market(coin_df):
+                print(f"Skipping {coin} - not in trending market")
+                continue
+
+            trending_coins += 1
+            print(f"Processing {coin} - trending market detected")
+
             # Calculate future returns
             coin_df['future_price'] = coin_df['close'].shift(-self.prediction_horizon)
             coin_df['future_return'] = (coin_df['future_price'] - coin_df['close']) / coin_df['close']
 
-            # Create discrete labels based on return thresholds
+            # Create discrete labels
             coin_df['label'] = 1  # Default to HOLD
-
-            # BUY signal: >2% expected gain
-            coin_df.loc[coin_df['future_return'] > 0.02, 'label'] = 2
-
-            # SELL signal: >2% expected loss
-            coin_df.loc[coin_df['future_return'] < -0.02, 'label'] = 0
+            coin_df.loc[coin_df['future_return'] > 0.02, 'label'] = 2  # BUY
+            coin_df.loc[coin_df['future_return'] < -0.02, 'label'] = 0  # SELL
 
             # Remove rows where we can't calculate future returns
             coin_df = coin_df.dropna(subset=['future_return'])
-
             labeled_dfs.append(coin_df)
+
+        if not labeled_dfs:
+            print("Warning: No coins in trending markets found!")
+            return pd.DataFrame()
+
+        print(f"Found {trending_coins} coins in trending markets out of {df['coin_id'].nunique()}")
 
         result = pd.concat(labeled_dfs, ignore_index=True)
 
@@ -354,4 +357,24 @@ class DataProcessor:
         }
 
         return feature_info
+
+    def is_trending_market(self, df, threshold=0.001):
+        """
+        Determine if market is in a trending state
+
+        Args:
+            df (pd.DataFrame): Data with EMA-20 calculated
+            threshold (float): Minimum EMA change rate to consider trending
+
+        Returns:
+            bool: True if market is trending
+        """
+        if len(df) < 20 or 'ema_20' not in df.columns:
+            return False
+
+        # Calculate EMA change rate
+        ema_change_rate = df['ema_20'].diff().abs().mean() / df['ema_20'].mean()
+
+        return ema_change_rate > threshold
+
 

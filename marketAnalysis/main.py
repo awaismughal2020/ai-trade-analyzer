@@ -11,7 +11,7 @@ import numpy as np
 from dotenv import load_dotenv
 
 # Import our custom modules
-from data_collector import CoinGeckoDataCollector
+from data_collector import DataCollector
 from data_processor import DataProcessor
 from market_model import MarketAnalysisLSTM
 
@@ -75,7 +75,7 @@ def collect_data(use_cached=False):
         return raw_data
 
     # Collect fresh data
-    collector = CoinGeckoDataCollector()
+    collector = DataCollector()
     raw_data = collector.collect_all_coins()
 
     if raw_data.empty:
