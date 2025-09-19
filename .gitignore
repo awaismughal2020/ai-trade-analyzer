@@ -2,7 +2,7 @@
 venv
 .envTesting
 __pycache__/*
-marketAnalysis/.env
+marketAnalysis/T1.env
 marketAnalysis/data/*
 marketAnalysis/plots/*
 marketAnalysis/venv

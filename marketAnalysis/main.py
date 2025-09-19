@@ -43,7 +43,7 @@ def validate_environment():
 
     if missing_vars:
         print(f"Missing required environment variables: {missing_vars}")
-        print("Please check your .env file")
+        print("Please check your T1.env file")
         return False
 
     print("Environment variables validated")
