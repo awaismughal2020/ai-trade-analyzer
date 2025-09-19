@@ -96,18 +96,18 @@ class DataCollector:
                 with open(self.incremental_save_file, 'r') as f:
                     first_line = f.readline().strip()
                     if first_line and 'timestamp' in first_line:
-                        print(f"✅ Incremental CSV file already exists: {self.incremental_save_file}")
+                        print(f"Incremental CSV file already exists: {self.incremental_save_file}")
                         return True
             
             # Create file with headers
             headers = ['timestamp', 'open', 'high', 'low', 'close', 'coin_id', 'volume']
             df_header = pd.DataFrame(columns=headers)
             df_header.to_csv(self.incremental_save_file, index=False)
-            print(f"✅ Initialized incremental CSV file: {self.incremental_save_file}")
+            print(f"Initialized incremental CSV file: {self.incremental_save_file}")
             return True
             
         except Exception as e:
-            print(f"❌ Error initializing incremental CSV: {e}")
+            print(f"Error initializing incremental CSV: {e}")
             return False
 
     def _append_to_incremental_csv(self, coin_data):
@@ -126,11 +126,11 @@ class DataCollector:
                 
             # Append to CSV file
             coin_data.to_csv(self.incremental_save_file, mode='a', header=False, index=False)
-            print(f"💾 Saved {len(coin_data)} records for {coin_data['coin_id'].iloc[0]} to incremental CSV")
+            print(f" Saved {len(coin_data)} records for {coin_data['coin_id'].iloc[0]} to incremental CSV")
             return True
             
         except Exception as e:
-            print(f"❌ Error appending to incremental CSV: {e}")
+            print(f"Error appending to incremental CSV: {e}")
             return False
 
     def get_existing_coins_from_incremental_csv(self):
@@ -150,11 +150,11 @@ class DataCollector:
                 return set()
                 
             existing_coins = set(df['coin_id'].unique())
-            print(f"📊 Found {len(existing_coins)} coins already in incremental CSV")
+            print(f"Found {len(existing_coins)} coins already in incremental CSV")
             return existing_coins
             
         except Exception as e:
-            print(f"❌ Error reading existing incremental CSV: {e}")
+            print(f"Error reading existing incremental CSV: {e}")
             return set()
 
     def filter_coins_to_process(self, coins_to_process):
@@ -179,8 +179,8 @@ class DataCollector:
         skipped_count = len(coins_to_process) - len(filtered_coins)
         
         if skipped_count > 0:
-            print(f"⏭️  Skipping {skipped_count} coins that already have data")
-            print(f"🔄 Processing {len(filtered_coins)} remaining coins")
+            print(f"Skipping {skipped_count} coins that already have data")
+            print(f"Processing {len(filtered_coins)} remaining coins")
         
         return filtered_coins
 
@@ -584,10 +584,10 @@ class DataCollector:
         # Initialize incremental saving if enabled
         if self.save_incrementally:
             if not self._initialize_incremental_csv():
-                print("⚠️  Warning: Could not initialize incremental CSV, continuing without incremental saving")
+                print("Warning: Could not initialize incremental CSV, continuing without incremental saving")
                 self.save_incrementally = False
             else:
-                print(f"💾 Incremental saving enabled: {self.incremental_save_file}")
+                print(f"Incremental saving enabled: {self.incremental_save_file}")
         
         print("-" * 50)
 
@@ -638,7 +638,7 @@ class DataCollector:
             print(f"Coins collected: {combined_df['coin_id'].unique().tolist()}")
             
             if self.save_incrementally:
-                print(f"💾 Incremental data saved to: {self.incremental_save_file}")
+                print(f" Incremental data saved to: {self.incremental_save_file}")
             
             if failed_coins:
                 print(f"Failed coins: {failed_coins[:10]}{'...' if len(failed_coins) > 10 else ''}")
@@ -759,7 +759,7 @@ def main():
             print(f"Sample coins: {csv_data['name'].head(5).tolist()}")
         
         # Ask user for confirmation before proceeding with large collection
-        print(f"\n⚠️  WARNING: This will collect OHLC data for ALL {len(csv_data)} coins!")
+        print(f"\nWARNING: This will collect OHLC data for ALL {len(csv_data)} coins!")
         print("This may take a very long time and use significant API quota.")
         
         response = input("\nDo you want to proceed? (y/N): ").strip().lower()
@@ -774,17 +774,17 @@ def main():
         if not data.empty:
             # Save the data
             filepath = collector.save_data(data)
-            print(f"\n✅ Data collection completed successfully!")
-            print(f"📁 Data saved to: {filepath}")
+            print(f"\n Data collection completed successfully!")
+            print(f" Data saved to: {filepath}")
             
             # Display summary statistics
-            print(f"\n📊 Collection Summary:")
+            print(f"\n Collection Summary:")
             print(f"   Total records: {len(data):,}")
             print(f"   Unique coins: {data['coin_id'].nunique()}")
             print(f"   Date range: {data['timestamp'].min()} to {data['timestamp'].max()}")
             print(f"   Average records per coin: {len(data) / data['coin_id'].nunique():.1f}")
         else:
-            print("❌ No data was collected.")
+            print(" No data was collected.")
             
     except Exception as e:
         print(f"Error in main execution: {e}")

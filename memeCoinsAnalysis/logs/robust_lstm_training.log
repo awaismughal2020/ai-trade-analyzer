@@ -1,0 +1,41 @@
+2025-09-19 14:29:00,628 - INFO - RobustLSTMTradingModel initialized with comprehensive fixes
+2025-09-19 14:29:00,628 - INFO - Loading data from data/processed_crypto_data_20250918_214215.csv
+2025-09-19 14:29:00,657 - INFO - Loaded 13507 records with 22 columns
+2025-09-19 14:29:00,661 - INFO - After cleaning: 13507 records
+2025-09-19 14:29:00,663 - INFO - Class distribution:
+2025-09-19 14:29:00,663 - INFO -   SELL (0): 3347 (24.8%)
+2025-09-19 14:29:00,663 - INFO -   HOLD (1): 7391 (54.7%)
+2025-09-19 14:29:00,663 - INFO -   BUY (2): 2769 (20.5%)
+2025-09-19 14:29:00,672 - INFO - Created 13497 sequences of length 10
+2025-09-19 14:29:00,673 - INFO - Starting model training with comprehensive validation
+2025-09-19 14:29:00,675 - INFO - Class weights: {0: 1.3474094040131777, 1: 0.6087132999594101, 2: 1.6259486808818215}
+2025-09-19 14:29:00,675 - INFO - Data splits - Train: 9717, Val: 2430, Test: 1350
+2025-09-19 14:29:00,675 - INFO - Training ensemble of 3 models
+2025-09-19 14:29:00,675 - INFO - Training model 1/3
+2025-09-19 14:29:00,864 - WARNING - At this time, the v2.11+ optimizer `tf.keras.optimizers.Adam` runs slowly on M1/M2 Macs, please use the legacy Keras optimizer instead, located at `tf.keras.optimizers.legacy.Adam`.
+2025-09-19 14:29:00,872 - WARNING - At this time, the v2.11+ optimizer `tf.keras.optimizers.Adam` runs slowly on M1/M2 Macs, please use the legacy Keras optimizer instead, located at `tf.keras.optimizers.legacy.Adam`.
+2025-09-19 14:29:32,045 - INFO - Training model 2/3
+2025-09-19 14:29:32,102 - WARNING - At this time, the v2.11+ optimizer `tf.keras.optimizers.Adam` runs slowly on M1/M2 Macs, please use the legacy Keras optimizer instead, located at `tf.keras.optimizers.legacy.Adam`.
+2025-09-19 14:29:32,105 - WARNING - At this time, the v2.11+ optimizer `tf.keras.optimizers.Adam` runs slowly on M1/M2 Macs, please use the legacy Keras optimizer instead, located at `tf.keras.optimizers.legacy.Adam`.
+2025-09-19 14:30:13,191 - INFO - Training model 3/3
+2025-09-19 14:30:13,248 - WARNING - At this time, the v2.11+ optimizer `tf.keras.optimizers.Adam` runs slowly on M1/M2 Macs, please use the legacy Keras optimizer instead, located at `tf.keras.optimizers.legacy.Adam`.
+2025-09-19 14:30:13,251 - WARNING - At this time, the v2.11+ optimizer `tf.keras.optimizers.Adam` runs slowly on M1/M2 Macs, please use the legacy Keras optimizer instead, located at `tf.keras.optimizers.legacy.Adam`.
+2025-09-19 14:30:52,539 - INFO - Ensemble training completed. Weights: [0.33441149635925327, 0.33434539869599916, 0.33124310494474757]
+2025-09-19 14:30:52,539 - INFO - Evaluating model performance
+2025-09-19 14:30:53,090 - INFO - Test Accuracy: 0.5059
+2025-09-19 14:30:53,091 - INFO - Mean Confidence: 0.4568
+2025-09-19 14:30:53,091 - INFO - High Confidence Signals: 12.3%
+2025-09-19 14:30:53,091 - INFO - Signal Distribution:
+2025-09-19 14:30:53,091 - INFO -   SELL: 45.9%
+2025-09-19 14:30:53,091 - INFO -   HOLD: 48.8%
+2025-09-19 14:30:53,091 - INFO -   BUY: 5.3%
+2025-09-19 14:30:53,091 - INFO - Generating comprehensive performance report
+2025-09-19 14:30:53,347 - INFO - Detailed results saved to models/robust_model_results_20250919_143053.csv
+2025-09-19 14:30:53,347 - INFO - Financial Performance:
+2025-09-19 14:30:53,347 - INFO -   total_return: 0.0000
+2025-09-19 14:30:53,347 - INFO -   num_trades: 0.0000
+2025-09-19 14:30:53,347 - INFO -   win_rate: 0.0000
+2025-09-19 14:30:53,347 - INFO -   sharpe_ratio: 0.0000
+2025-09-19 14:30:53,347 - INFO -   final_capital: 10000.0000
+2025-09-19 14:30:53,347 - INFO -   max_drawdown: 0.0000
+2025-09-19 14:30:53,382 - INFO - Model saved successfully. Timestamp: 20250919_143053
