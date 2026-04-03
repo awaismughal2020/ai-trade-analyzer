@@ -1,0 +1,2170 @@
+{
+  "test_type": "meme",
+  "base_url": "http://localhost:8800",
+  "timestamp": "20260314_092620",
+  "count": 12,
+  "results": [
+    {
+      "payload": {
+        "token_address": "6gqRitdpDuQUQ2qim3ZpJweNuahNP9vp8GdLmrfHoLD",
+        "token_type": "meme"
+      },
+      "response": {
+        "signal": "SELL",
+        "confidence": 0.559043619192087,
+        "confidence_grade": "Cautious",
+        "confidence_analysis": {
+          "confidence_before_safety": 0.559,
+          "confidence_after_safety": 0.559,
+          "confidence_grade": "Cautious",
+          "adjustments": null
+        },
+        "token_address": "6gqRitdpDuQUQ2qim3ZpJweNuahNP9vp8GdLmrfHoLD",
+        "token_type": "meme",
+        "timestamp": "2026-03-14T09:26:04.727691Z",
+        "summary": "Over the last 23.9h, price is down -1.1% with declining volume and moderate sell pressure. Whale activity is stable, holder count is stable (low holder count), but there are concerns: high inequality, high top 10 concentration. Market trend leaning bearish. Market Conditions: Fear (F&G: 16, improving). BTC dominance 56.9% (rising). Total market cap -1.82%. Altcoin index: 44 (0). Signal effective for the next 24 hours.",
+        "signal_effectiveness": {
+          "effectiveness_hours": 24,
+          "analysis_window": "Last 23.9 hours",
+          "prediction_window": "Next 24 hours",
+          "signal_valid_from": "2026-03-13T09:26:04.727691Z",
+          "signal_valid_until": "2026-03-15T09:26:04.727691Z",
+          "data_strategy": "Candle data covers partial window; 24h price change from Birdeye when available. Signal calibrated for \u00b124h.",
+          "recent_24h_analysis": {
+            "window_hours": 24,
+            "candles_analyzed": 288,
+            "total_candles_available": 864,
+            "data_freshness": {
+              "latest_candle_age_hours": 0.02,
+              "is_stale": false,
+              "latest_candle_timestamp": "2026-03-14T09:25:00+00:00",
+              "warning": null
+            },
+            "window_actual_hours": 23.9,
+            "price_change_24h_pct": -1.05,
+            "price_current": 4.71e-06,
+            "price_24h_high": 4.9e-06,
+            "price_24h_low": 4.69e-06,
+            "price_24h_range_pct": 4.52,
+            "trend_24h": "bearish",
+            "volume_24h_total": 3377509.92,
+            "volume_24h_avg": 11727.46,
+            "volume_trend_24h": "decreasing",
+            "volume_trend_change_pct": -74.37,
+            "buy_sell_data_source": "birdeye_24h",
+            "volatility_24h": 0.001875,
+            "price_change_24h_source": "candles",
+            "buy_pressure_24h": 0.4387,
+            "sell_pressure_24h": 0.5613,
+            "net_flow_24h": -413995.42,
+            "buy_sell_ratio_24h": 0.7816
+          }
+        },
+        "layer_breakdown": {
+          "ml_model": {
+            "signal": "HOLD",
+            "confidence": 0.7755,
+            "base_weight": 0.3,
+            "adjusted_weight": 0.4226,
+            "contribution": 0.0,
+            "is_valid": true
+          },
+          "whale_engine": {
+            "signal": "HOLD",
+            "confidence": 0.549,
+            "base_weight": 0.25,
+            "adjusted_weight": 0.3072,
+            "contribution": 0.0,
+            "is_valid": true
+          },
+          "technical": {
+            "signal": "HOLD",
+            "confidence": 0.5,
+            "base_weight": 0.1,
+            "adjusted_weight": 0.119,
+            "contribution": 0.0,
+            "is_valid": true
+          },
+          "holder_metrics": {
+            "signal": "SELL",
+            "confidence": 0.2708,
+            "base_weight": 0.15,
+            "adjusted_weight": 0.1512,
+            "contribution": -0.041,
+            "is_valid": true
+          },
+          "user_profile": {
+            "signal": "HOLD",
+            "confidence": 0.0,
+            "base_weight": 0.2,
+            "adjusted_weight": 0.0,
+            "contribution": 0.0,
+            "is_valid": false
+          }
+        },
+        "layers_used": 4,
+        "agreement_level": 0.75,
+        "whale_buy_volume": 1481757.250423,
+        "whale_sell_volume": 1895752.6691390001,
+        "whale_net_volume": -413995.41871600016,
+        "whale_volume_unit": "tokens",
+        "whale_data_source": "birdeye_24h",
+        "is_whale_data_stale": false,
+        "dominant_whale_status": "NOT_AVAILABLE",
+        "dominant_whale_inactive_holding_pct": 0.0,
+        "dominant_whale_aging_holding_pct": 0.0,
+        "top_holder_last_activity_hours": null,
+        "gini_coefficient": 0.9229271147118192,
+        "top10_hold_percent": 91.13174476281031,
+        "dev_hold_percent": 0.0,
+        "sniper_hold_percent": 0.0,
+        "phase": "P2",
+        "safety_overrides_applied": [
+          {
+            "check": "extreme_concentration",
+            "condition": "top10_hold_percent >= 85.0%",
+            "value": 91.1,
+            "original_signal": "HOLD",
+            "new_signal": "SELL",
+            "reason": "EXTREME concentration risk - Top 10 control 91.1% (rug pull risk)"
+          }
+        ],
+        "timing": {
+          "type": "exit",
+          "recommendation": "EXIT_NOW",
+          "confidence": 0.19999999999999998,
+          "final_score": 0.03333333333333333,
+          "reason": "Low liquidity ($5,900) - high slippage risk; Sell pressure (56% sell, 24h aggregate) - good time to exit. CAUTION: Top 10 holders control 91.1% of supply; HIGH INEQUALITY: Gini coefficient 0.92",
+          "wait_minutes": 0,
+          "potential_improvement_pct": 2.933333333333333,
+          "miss_risk_pct": 7.833333333333333,
+          "warnings": [
+            "CAUTION: Top 10 holders control 91.1% of supply",
+            "HIGH INEQUALITY: Gini coefficient 0.92"
+          ],
+          "degraded": false,
+          "component_scores": {
+            "momentum": 0.0,
+            "volume": 0.3,
+            "liquidity": -0.5,
+            "smart_money": 0.0,
+            "whale": 0.3
+          }
+        },
+        "risk_management": null,
+        "candle_data_freshness": {
+          "latest_candle_age_hours": 0.02,
+          "is_stale": false,
+          "latest_candle_timestamp": "2026-03-14T09:25:00+00:00",
+          "warning": null
+        },
+        "candle_data_source": "birdeye",
+        "data_quality": {
+          "degraded": false,
+          "reason": null,
+          "candle_source": "birdeye",
+          "whale_source": "birdeye_24h",
+          "primary_source": "birdeye"
+        },
+        "market_context": {
+          "fear_greed": 16,
+          "fear_greed_change": 1,
+          "altcoin_index": 44,
+          "altcoin_index_change": 0,
+          "btc_dominance": 56.898464,
+          "btc_dominance_change": 0.57,
+          "eth_dominance": 10.1,
+          "eth_dominance_change": 0.9,
+          "total_market_cap": 2483675481090.0,
+          "total_market_cap_change": -1.82,
+          "total_volume_24h": 46954671747.0,
+          "total_volume_24h_change": -7.82,
+          "investment_activity": -35,
+          "active_currencies": 4705,
+          "market_regime": "SIDEWAYS",
+          "market_favorability": 0.16,
+          "is_extreme_fear": false,
+          "is_extreme_greed": false,
+          "is_default": false,
+          "fetched_at": "2026-03-14T09:00:00.166Z"
+        },
+        "execution_time_seconds": 2.5295
+      }
+    },
+    {
+      "payload": {
+        "token_address": "6VQiK6wNoeeQ5osVw2CrQGh5wAoRvJEVMbEQGoWppump",
+        "token_type": "meme"
+      },
+      "response": {
+        "signal": "HOLD",
+        "confidence": 0.3804555850990649,
+        "confidence_grade": "Weak",
+        "confidence_analysis": {
+          "confidence_before_safety": 0.3805,
+          "confidence_after_safety": 0.3805,
+          "confidence_grade": "Weak",
+          "adjustments": null
+        },
+        "token_address": "6VQiK6wNoeeQ5osVw2CrQGh5wAoRvJEVMbEQGoWppump",
+        "token_type": "meme",
+        "timestamp": "2026-03-14T09:26:05.773487Z",
+        "summary": "Over the last 23.9h, price is down -17.4% with stable volume and strong sell pressure. Whales are distributing moderately, holder count is stable (low holder count), but there is high inequality. Market trend strongly bearish. Market Conditions: Fear (F&G: 16, improving). BTC dominance 56.9% (rising). Total market cap -1.82%. Altcoin index: 44 (0). Signal effective for the next 24 hours.",
+        "signal_effectiveness": {
+          "effectiveness_hours": 24,
+          "analysis_window": "Last 23.9 hours",
+          "prediction_window": "Next 24 hours",
+          "signal_valid_from": "2026-03-13T09:26:05.773487Z",
+          "signal_valid_until": "2026-03-15T09:26:05.773487Z",
+          "data_strategy": "Candle data covers partial window; 24h price change from Birdeye when available. Signal calibrated for \u00b124h.",
+          "recent_24h_analysis": {
+            "window_hours": 24,
+            "candles_analyzed": 288,
+            "total_candles_available": 864,
+            "data_freshness": {
+              "latest_candle_age_hours": 0.02,
+              "is_stale": false,
+              "latest_candle_timestamp": "2026-03-14T09:25:00+00:00",
+              "warning": null
+            },
+            "window_actual_hours": 23.9,
+            "price_change_24h_pct": -17.43,
+            "price_current": 1.263e-05,
+            "price_24h_high": 1.551e-05,
+            "price_24h_low": 1.263e-05,
+            "price_24h_range_pct": 22.82,
+            "trend_24h": "strongly_bearish",
+            "volume_24h_total": 62684238.09,
+            "volume_24h_avg": 217653.6,
+            "volume_trend_24h": "stable",
+            "volume_trend_change_pct": 5.41,
+            "buy_sell_data_source": "birdeye_24h",
+            "volatility_24h": 0.006751,
+            "price_change_24h_source": "candles",
+            "buy_pressure_24h": 0.2615,
+            "sell_pressure_24h": 0.7385,
+            "net_flow_24h": -29894609.44,
+            "buy_sell_ratio_24h": 0.3542
+          }
+        },
+        "layer_breakdown": {
+          "ml_model": {
+            "signal": "HOLD",
+            "confidence": 0.8546,
+            "base_weight": 0.3,
+            "adjusted_weight": 0.4184,
+            "contribution": 0.0,
+            "is_valid": true
+          },
+          "whale_engine": {
+            "signal": "SELL",
+            "confidence": 0.6908,
+            "base_weight": 0.25,
+            "adjusted_weight": 0.3178,
+            "contribution": -0.2195,
+            "is_valid": true
+          },
+          "technical": {
+            "signal": "HOLD",
+            "confidence": 0.5,
+            "base_weight": 0.1,
+            "adjusted_weight": 0.1128,
+            "contribution": 0.0,
+            "is_valid": true
+          },
+          "holder_metrics": {
+            "signal": "HOLD",
+            "confidence": 0.339,
+            "base_weight": 0.15,
+            "adjusted_weight": 0.151,
+            "contribution": 0.0,
+            "is_valid": true
+          },
+          "user_profile": {
+            "signal": "HOLD",
+            "confidence": 0.0,
+            "base_weight": 0.2,
+            "adjusted_weight": 0.0,
+            "contribution": 0.0,
+            "is_valid": false
+          }
+        },
+        "layers_used": 4,
+        "agreement_level": 0.75,
+        "whale_buy_volume": 16394814.321400002,
+        "whale_sell_volume": 46289423.766257,
+        "whale_net_volume": -29894609.444857,
+        "whale_volume_unit": "tokens",
+        "whale_data_source": "birdeye_24h",
+        "is_whale_data_stale": false,
+        "dominant_whale_status": "NOT_AVAILABLE",
+        "dominant_whale_inactive_holding_pct": 0.0,
+        "dominant_whale_aging_holding_pct": 0.0,
+        "top_holder_last_activity_hours": null,
+        "gini_coefficient": 0.806541553171922,
+        "top10_hold_percent": 54.8949959835032,
+        "dev_hold_percent": 0.0,
+        "sniper_hold_percent": 0.0,
+        "phase": "P3",
+        "safety_overrides_applied": null,
+        "timing": {
+          "type": "entry",
+          "recommendation": "WAIT",
+          "confidence": 0.42777777777777765,
+          "final_score": -0.038888888888888834,
+          "reason": "RSI extremely oversold (0.0); Whales distributing - bearish. HIGH INEQUALITY: Gini coefficient 0.81",
+          "wait_minutes": 0,
+          "potential_improvement_pct": 1.0,
+          "miss_risk_pct": 3.0,
+          "warnings": [
+            "HIGH INEQUALITY: Gini coefficient 0.81"
+          ],
+          "degraded": false,
+          "component_scores": {
+            "momentum": 1.0,
+            "volume": -0.3,
+            "liquidity": -0.5,
+            "smart_money": 0.0,
+            "whale": -1.0
+          }
+        },
+        "risk_management": null,
+        "candle_data_freshness": {
+          "latest_candle_age_hours": 0.02,
+          "is_stale": false,
+          "latest_candle_timestamp": "2026-03-14T09:25:00+00:00",
+          "warning": null
+        },
+        "candle_data_source": "birdeye",
+        "data_quality": {
+          "degraded": false,
+          "reason": null,
+          "candle_source": "birdeye",
+          "whale_source": "birdeye_24h",
+          "primary_source": "birdeye"
+        },
+        "market_context": {
+          "fear_greed": 16,
+          "fear_greed_change": 1,
+          "altcoin_index": 44,
+          "altcoin_index_change": 0,
+          "btc_dominance": 56.898464,
+          "btc_dominance_change": 0.57,
+          "eth_dominance": 10.1,
+          "eth_dominance_change": 0.9,
+          "total_market_cap": 2483675481090.0,
+          "total_market_cap_change": -1.82,
+          "total_volume_24h": 46954671747.0,
+          "total_volume_24h_change": -7.82,
+          "investment_activity": -35,
+          "active_currencies": 4705,
+          "market_regime": "SIDEWAYS",
+          "market_favorability": 0.16,
+          "is_extreme_fear": false,
+          "is_extreme_greed": false,
+          "is_default": false,
+          "fetched_at": "2026-03-14T09:00:00.166Z"
+        },
+        "execution_time_seconds": 1.0368
+      }
+    },
+    {
+      "payload": {
+        "token_address": "rdWrAxwJwXaknCxyzbePN787JjiwGuMejotYkWWpump",
+        "token_type": "meme"
+      },
+      "response": {
+        "signal": "HOLD",
+        "confidence": 0.3093589396569908,
+        "confidence_grade": "Weak",
+        "confidence_analysis": {
+          "confidence_before_safety": 0.3094,
+          "confidence_after_safety": 0.3094,
+          "confidence_grade": "Weak",
+          "adjustments": null
+        },
+        "token_address": "rdWrAxwJwXaknCxyzbePN787JjiwGuMejotYkWWpump",
+        "token_type": "meme",
+        "timestamp": "2026-03-14T09:26:09.199309Z",
+        "summary": "Over the last 23.9h, price is up +39.7% with declining volume and strong buy pressure. Whales are accumulating moderately, holder count is stable (low holder count), but there are concerns: high inequality, high top 10 concentration. Market trend strongly bullish. Market Conditions: Fear (F&G: 16, improving). BTC dominance 56.9% (rising). Total market cap -1.82%. Altcoin index: 44 (0). Signal effective for the next 24 hours.",
+        "signal_effectiveness": {
+          "effectiveness_hours": 24,
+          "analysis_window": "Last 23.9 hours",
+          "prediction_window": "Next 24 hours",
+          "signal_valid_from": "2026-03-13T09:26:09.199309Z",
+          "signal_valid_until": "2026-03-15T09:26:09.199309Z",
+          "data_strategy": "Candle data covers partial window; 24h price change from Birdeye when available. Signal calibrated for \u00b124h.",
+          "recent_24h_analysis": {
+            "window_hours": 24,
+            "candles_analyzed": 288,
+            "total_candles_available": 864,
+            "data_freshness": {
+              "latest_candle_age_hours": 0.02,
+              "is_stale": false,
+              "latest_candle_timestamp": "2026-03-14T09:25:00+00:00",
+              "warning": null
+            },
+            "window_actual_hours": 23.9,
+            "price_change_24h_pct": 39.72,
+            "price_current": 6.21e-06,
+            "price_24h_high": 6.8e-06,
+            "price_24h_low": 4.27e-06,
+            "price_24h_range_pct": 59.04,
+            "trend_24h": "strongly_bullish",
+            "volume_24h_total": 449376939.54,
+            "volume_24h_avg": 1560336.6,
+            "volume_trend_24h": "decreasing",
+            "volume_trend_change_pct": -79.9,
+            "buy_sell_data_source": "birdeye_24h",
+            "volatility_24h": 0.015583,
+            "price_change_24h_source": "candles",
+            "buy_pressure_24h": 0.6289,
+            "sell_pressure_24h": 0.3711,
+            "net_flow_24h": 115845245.72,
+            "buy_sell_ratio_24h": 1.6947
+          }
+        },
+        "layer_breakdown": {
+          "ml_model": {
+            "signal": "HOLD",
+            "confidence": 0.9484,
+            "base_weight": 0.3,
+            "adjusted_weight": 0.4401,
+            "contribution": 0.0,
+            "is_valid": true
+          },
+          "whale_engine": {
+            "signal": "BUY",
+            "confidence": 0.6031,
+            "base_weight": 0.25,
+            "adjusted_weight": 0.3018,
+            "contribution": 0.182,
+            "is_valid": true
+          },
+          "technical": {
+            "signal": "HOLD",
+            "confidence": 0.5,
+            "base_weight": 0.1,
+            "adjusted_weight": 0.1129,
+            "contribution": 0.0,
+            "is_valid": true
+          },
+          "holder_metrics": {
+            "signal": "SELL",
+            "confidence": 0.285,
+            "base_weight": 0.15,
+            "adjusted_weight": 0.1451,
+            "contribution": -0.0414,
+            "is_valid": true
+          },
+          "user_profile": {
+            "signal": "HOLD",
+            "confidence": 0.0,
+            "base_weight": 0.2,
+            "adjusted_weight": 0.0,
+            "contribution": 0.0,
+            "is_valid": false
+          }
+        },
+        "layers_used": 4,
+        "agreement_level": 0.5,
+        "whale_buy_volume": 282611092.632249,
+        "whale_sell_volume": 166765846.909718,
+        "whale_net_volume": 115845245.72253099,
+        "whale_volume_unit": "tokens",
+        "whale_data_source": "birdeye_24h",
+        "is_whale_data_stale": false,
+        "dominant_whale_status": "NOT_AVAILABLE",
+        "dominant_whale_inactive_holding_pct": 0.0,
+        "dominant_whale_aging_holding_pct": 0.0,
+        "top_holder_last_activity_hours": null,
+        "gini_coefficient": 0.8874740827957288,
+        "top10_hold_percent": 81.8836687852681,
+        "dev_hold_percent": 0.0,
+        "sniper_hold_percent": 0.0,
+        "phase": "P3",
+        "safety_overrides_applied": null,
+        "timing": {
+          "type": "entry",
+          "recommendation": "WAIT",
+          "confidence": 0.3222222222222222,
+          "final_score": -0.011111111111111113,
+          "reason": "Whales accumulating - bullish; Low liquidity ($6,551) - high slippage risk. HIGH INEQUALITY: Gini coefficient 0.89",
+          "wait_minutes": 0,
+          "potential_improvement_pct": 1.0,
+          "miss_risk_pct": 3.0,
+          "warnings": [
+            "HIGH INEQUALITY: Gini coefficient 0.89"
+          ],
+          "degraded": false,
+          "component_scores": {
+            "momentum": -0.4,
+            "volume": 0.3,
+            "liquidity": -0.5,
+            "smart_money": 0.0,
+            "whale": 0.7
+          }
+        },
+        "risk_management": null,
+        "candle_data_freshness": {
+          "latest_candle_age_hours": 0.02,
+          "is_stale": false,
+          "latest_candle_timestamp": "2026-03-14T09:25:00+00:00",
+          "warning": null
+        },
+        "candle_data_source": "birdeye",
+        "data_quality": {
+          "degraded": false,
+          "reason": null,
+          "candle_source": "birdeye",
+          "whale_source": "birdeye_24h",
+          "primary_source": "birdeye"
+        },
+        "market_context": {
+          "fear_greed": 16,
+          "fear_greed_change": 1,
+          "altcoin_index": 44,
+          "altcoin_index_change": 0,
+          "btc_dominance": 56.898464,
+          "btc_dominance_change": 0.57,
+          "eth_dominance": 10.1,
+          "eth_dominance_change": 0.9,
+          "total_market_cap": 2483675481090.0,
+          "total_market_cap_change": -1.82,
+          "total_volume_24h": 46954671747.0,
+          "total_volume_24h_change": -7.82,
+          "investment_activity": -35,
+          "active_currencies": 4705,
+          "market_regime": "SIDEWAYS",
+          "market_favorability": 0.16,
+          "is_extreme_fear": false,
+          "is_extreme_greed": false,
+          "is_default": false,
+          "fetched_at": "2026-03-14T09:00:00.166Z"
+        },
+        "execution_time_seconds": 3.418
+      }
+    },
+    {
+      "payload": {
+        "token_address": "5r29DJ3sDxbMtv81A2gv2XQP1HQZYKzqQ27cEVFLpump",
+        "token_type": "meme"
+      },
+      "response": {
+        "signal": "SELL",
+        "confidence": 0.95,
+        "confidence_grade": "Strong",
+        "confidence_analysis": {
+          "confidence_before_safety": 0.95,
+          "confidence_after_safety": 0.95,
+          "confidence_grade": "Strong",
+          "adjustments": null
+        },
+        "token_address": "5r29DJ3sDxbMtv81A2gv2XQP1HQZYKzqQ27cEVFLpump",
+        "token_type": "meme",
+        "timestamp": "2026-03-14T09:26:10.133396Z",
+        "summary": "Over the last 23.9h, price is up +7.1% with declining volume and strong sell pressure. Whales are distributing heavily, holder count is stable (low holder count), but there are concerns: high inequality, high top 10 concentration. Market trend strongly bullish. Market Conditions: Fear (F&G: 16, improving). BTC dominance 56.9% (rising). Total market cap -1.82%. Altcoin index: 44 (0). Signal effective for the next 24 hours.",
+        "signal_effectiveness": {
+          "effectiveness_hours": 24,
+          "analysis_window": "Last 23.9 hours",
+          "prediction_window": "Next 24 hours",
+          "signal_valid_from": "2026-03-13T09:26:10.133396Z",
+          "signal_valid_until": "2026-03-15T09:26:10.133396Z",
+          "data_strategy": "Candle data covers partial window; 24h price change from Birdeye when available. Signal calibrated for \u00b124h.",
+          "recent_24h_analysis": {
+            "window_hours": 24,
+            "candles_analyzed": 288,
+            "total_candles_available": 864,
+            "data_freshness": {
+              "latest_candle_age_hours": 0.02,
+              "is_stale": false,
+              "latest_candle_timestamp": "2026-03-14T09:25:00+00:00",
+              "warning": null
+            },
+            "window_actual_hours": 23.9,
+            "price_change_24h_pct": 7.1,
+            "price_current": 2.01e-06,
+            "price_24h_high": 2.01e-06,
+            "price_24h_low": 1.88e-06,
+            "price_24h_range_pct": 7.1,
+            "trend_24h": "strongly_bullish",
+            "volume_24h_total": 201423.76,
+            "volume_24h_avg": 699.39,
+            "volume_trend_24h": "decreasing",
+            "volume_trend_change_pct": -95.0,
+            "buy_sell_data_source": "birdeye_24h",
+            "volatility_24h": 0.004184,
+            "price_change_24h_source": "candles",
+            "buy_pressure_24h": 0.0,
+            "sell_pressure_24h": 1.0,
+            "net_flow_24h": -201423.76,
+            "buy_sell_ratio_24h": 0.0
+          }
+        },
+        "layer_breakdown": {
+          "ml_model": {
+            "signal": "SELL",
+            "confidence": 0.725,
+            "base_weight": 0.3,
+            "adjusted_weight": 0.3883,
+            "contribution": -0.2815,
+            "is_valid": true
+          },
+          "whale_engine": {
+            "signal": "SELL",
+            "confidence": 0.9,
+            "base_weight": 0.25,
+            "adjusted_weight": 0.3564,
+            "contribution": -0.3207,
+            "is_valid": true
+          },
+          "technical": {
+            "signal": "HOLD",
+            "confidence": 0.5,
+            "base_weight": 0.1,
+            "adjusted_weight": 0.1125,
+            "contribution": 0.0,
+            "is_valid": true
+          },
+          "holder_metrics": {
+            "signal": "SELL",
+            "confidence": 0.2692,
+            "base_weight": 0.15,
+            "adjusted_weight": 0.1428,
+            "contribution": -0.0385,
+            "is_valid": true
+          },
+          "user_profile": {
+            "signal": "HOLD",
+            "confidence": 0.0,
+            "base_weight": 0.2,
+            "adjusted_weight": 0.0,
+            "contribution": 0.0,
+            "is_valid": false
+          }
+        },
+        "layers_used": 4,
+        "agreement_level": 0.75,
+        "whale_buy_volume": 0.0,
+        "whale_sell_volume": 201423.764714,
+        "whale_net_volume": -201423.764714,
+        "whale_volume_unit": "tokens",
+        "whale_data_source": "birdeye_24h",
+        "is_whale_data_stale": false,
+        "dominant_whale_status": "NOT_AVAILABLE",
+        "dominant_whale_inactive_holding_pct": 0.0,
+        "dominant_whale_aging_holding_pct": 0.0,
+        "top_holder_last_activity_hours": null,
+        "gini_coefficient": 0.85,
+        "top10_hold_percent": 99.87305898479181,
+        "dev_hold_percent": 0.0,
+        "sniper_hold_percent": 0.0,
+        "phase": "P2",
+        "safety_overrides_applied": null,
+        "timing": {
+          "type": "exit",
+          "recommendation": "EXIT_NOW",
+          "confidence": 0.475,
+          "final_score": 0.33333333333333337,
+          "reason": "Whales distributing - exit urgently; Price up 7.1% (24h) - excellent exit point. CAUTION: Top 10 holders control 99.9% of supply; HIGH INEQUALITY: Gini coefficient 0.85",
+          "wait_minutes": 0,
+          "potential_improvement_pct": 2.333333333333333,
+          "miss_risk_pct": 6.333333333333333,
+          "warnings": [
+            "CAUTION: Top 10 holders control 99.9% of supply",
+            "HIGH INEQUALITY: Gini coefficient 0.85"
+          ],
+          "degraded": false,
+          "component_scores": {
+            "momentum": 0.5,
+            "volume": 0.5,
+            "liquidity": -0.5,
+            "smart_money": 0.0,
+            "whale": 1.0
+          }
+        },
+        "risk_management": null,
+        "candle_data_freshness": {
+          "latest_candle_age_hours": 0.02,
+          "is_stale": false,
+          "latest_candle_timestamp": "2026-03-14T09:25:00+00:00",
+          "warning": null
+        },
+        "candle_data_source": "birdeye",
+        "data_quality": {
+          "degraded": false,
+          "reason": null,
+          "candle_source": "birdeye",
+          "whale_source": "birdeye_24h",
+          "primary_source": "birdeye"
+        },
+        "market_context": {
+          "fear_greed": 16,
+          "fear_greed_change": 1,
+          "altcoin_index": 44,
+          "altcoin_index_change": 0,
+          "btc_dominance": 56.898464,
+          "btc_dominance_change": 0.57,
+          "eth_dominance": 10.1,
+          "eth_dominance_change": 0.9,
+          "total_market_cap": 2483675481090.0,
+          "total_market_cap_change": -1.82,
+          "total_volume_24h": 46954671747.0,
+          "total_volume_24h_change": -7.82,
+          "investment_activity": -35,
+          "active_currencies": 4705,
+          "market_regime": "SIDEWAYS",
+          "market_favorability": 0.16,
+          "is_extreme_fear": false,
+          "is_extreme_greed": false,
+          "is_default": false,
+          "fetched_at": "2026-03-14T09:00:00.166Z"
+        },
+        "execution_time_seconds": 0.9259
+      }
+    },
+    {
+      "payload": {
+        "token_address": "8jiVXftnn2ZG6bugK7HAH5j2G3D6TpsG521gqsWwpump",
+        "token_type": "meme"
+      },
+      "response": {
+        "signal": "HOLD",
+        "confidence": 0.47830732527885933,
+        "confidence_grade": "Weak",
+        "confidence_analysis": {
+          "confidence_before_safety": 0.4783,
+          "confidence_after_safety": 0.4783,
+          "confidence_grade": "Weak",
+          "adjustments": null
+        },
+        "token_address": "8jiVXftnn2ZG6bugK7HAH5j2G3D6TpsG521gqsWwpump",
+        "token_type": "meme",
+        "timestamp": "2026-03-14T09:26:12.068211Z",
+        "summary": "Over the last 23.9h, price is down -8.5% with declining volume and moderate sell pressure. Whale activity is stable, holder count is stable (low holder count), and supply concentration is moderate. Market trend strongly bearish. Market Conditions: Fear (F&G: 16, improving). BTC dominance 56.9% (rising). Total market cap -1.82%. Altcoin index: 44 (0). Signal effective for the next 24 hours.",
+        "signal_effectiveness": {
+          "effectiveness_hours": 24,
+          "analysis_window": "Last 23.9 hours",
+          "prediction_window": "Next 24 hours",
+          "signal_valid_from": "2026-03-13T09:26:12.068211Z",
+          "signal_valid_until": "2026-03-15T09:26:12.068211Z",
+          "data_strategy": "Candle data covers partial window; 24h price change from Birdeye when available. Signal calibrated for \u00b124h.",
+          "recent_24h_analysis": {
+            "window_hours": 24,
+            "candles_analyzed": 288,
+            "total_candles_available": 864,
+            "data_freshness": {
+              "latest_candle_age_hours": 0.02,
+              "is_stale": false,
+              "latest_candle_timestamp": "2026-03-14T09:25:00+00:00",
+              "warning": null
+            },
+            "window_actual_hours": 23.9,
+            "price_change_24h_pct": -8.49,
+            "price_current": 0.00031139,
+            "price_24h_high": 0.00044576,
+            "price_24h_low": 0.00025307,
+            "price_24h_range_pct": 76.14,
+            "trend_24h": "strongly_bearish",
+            "volume_24h_total": 1000105027.74,
+            "volume_24h_avg": 3472586.9,
+            "volume_trend_24h": "decreasing",
+            "volume_trend_change_pct": -59.33,
+            "buy_sell_data_source": "birdeye_24h",
+            "volatility_24h": 0.030254,
+            "price_change_24h_source": "candles",
+            "buy_pressure_24h": 0.4983,
+            "sell_pressure_24h": 0.5017,
+            "net_flow_24h": -3501079.53,
+            "buy_sell_ratio_24h": 0.9932
+          }
+        },
+        "layer_breakdown": {
+          "ml_model": {
+            "signal": "HOLD",
+            "confidence": 0.7007,
+            "base_weight": 0.3,
+            "adjusted_weight": 0.3983,
+            "contribution": 0.0,
+            "is_valid": true
+          },
+          "whale_engine": {
+            "signal": "HOLD",
+            "confidence": 0.5014,
+            "base_weight": 0.25,
+            "adjusted_weight": 0.293,
+            "contribution": 0.0,
+            "is_valid": true
+          },
+          "technical": {
+            "signal": "HOLD",
+            "confidence": 0.5,
+            "base_weight": 0.1,
+            "adjusted_weight": 0.1171,
+            "contribution": 0.0,
+            "is_valid": true
+          },
+          "holder_metrics": {
+            "signal": "BUY",
+            "confidence": 0.6354,
+            "base_weight": 0.15,
+            "adjusted_weight": 0.1915,
+            "contribution": 0.1217,
+            "is_valid": true
+          },
+          "user_profile": {
+            "signal": "HOLD",
+            "confidence": 0.0,
+            "base_weight": 0.2,
+            "adjusted_weight": 0.0,
+            "contribution": 0.0,
+            "is_valid": false
+          }
+        },
+        "layers_used": 4,
+        "agreement_level": 0.75,
+        "whale_buy_volume": 511944004.96558404,
+        "whale_sell_volume": 515445084.49590194,
+        "whale_net_volume": -3501079.5303179026,
+        "whale_volume_unit": "tokens",
+        "whale_data_source": "birdeye_24h",
+        "is_whale_data_stale": false,
+        "dominant_whale_status": "NOT_AVAILABLE",
+        "dominant_whale_inactive_holding_pct": 0.0,
+        "dominant_whale_aging_holding_pct": 0.0,
+        "top_holder_last_activity_hours": null,
+        "gini_coefficient": 0.4593966690941591,
+        "top10_hold_percent": 25.430649817000102,
+        "dev_hold_percent": 0.0,
+        "sniper_hold_percent": 0.0,
+        "phase": "P3",
+        "safety_overrides_applied": null,
+        "timing": {
+          "type": "entry",
+          "recommendation": "WAIT",
+          "confidence": 0.35777777777777775,
+          "final_score": 0.10555555555555557,
+          "reason": "Price down 8.5% (24h) - strong dip opportunity; Whales activity stable. Timing aligned with signal: HOLD suggests no position \u2014 ENTER_NOW overridden to WAIT",
+          "wait_minutes": 60,
+          "potential_improvement_pct": 0.5,
+          "miss_risk_pct": 9.472222222222221,
+          "warnings": [
+            "Timing aligned with signal: HOLD suggests no position \u2014 ENTER_NOW overridden to WAIT"
+          ],
+          "degraded": false,
+          "component_scores": {
+            "momentum": 0.5,
+            "volume": 0.0,
+            "liquidity": 0.0,
+            "smart_money": 0.0,
+            "whale": -0.2
+          }
+        },
+        "risk_management": null,
+        "candle_data_freshness": {
+          "latest_candle_age_hours": 0.02,
+          "is_stale": false,
+          "latest_candle_timestamp": "2026-03-14T09:25:00+00:00",
+          "warning": null
+        },
+        "candle_data_source": "birdeye",
+        "data_quality": {
+          "degraded": false,
+          "reason": null,
+          "candle_source": "birdeye",
+          "whale_source": "birdeye_24h",
+          "primary_source": "birdeye"
+        },
+        "market_context": {
+          "fear_greed": 16,
+          "fear_greed_change": 1,
+          "altcoin_index": 44,
+          "altcoin_index_change": 0,
+          "btc_dominance": 56.898464,
+          "btc_dominance_change": 0.57,
+          "eth_dominance": 10.1,
+          "eth_dominance_change": 0.9,
+          "total_market_cap": 2483675481090.0,
+          "total_market_cap_change": -1.82,
+          "total_volume_24h": 46954671747.0,
+          "total_volume_24h_change": -7.82,
+          "investment_activity": -35,
+          "active_currencies": 4705,
+          "market_regime": "SIDEWAYS",
+          "market_favorability": 0.16,
+          "is_extreme_fear": false,
+          "is_extreme_greed": false,
+          "is_default": false,
+          "fetched_at": "2026-03-14T09:00:00.166Z"
+        },
+        "execution_time_seconds": 1.9273
+      }
+    },
+    {
+      "payload": {
+        "token_address": "4964SXikZQWnCXUoAXQar6tLAv5xRhYS4uQqLUc6pump",
+        "token_type": "meme"
+      },
+      "response": {
+        "signal": "SELL",
+        "confidence": 0.543556926266684,
+        "confidence_grade": "Cautious",
+        "confidence_analysis": {
+          "confidence_before_safety": 0.5436,
+          "confidence_after_safety": 0.5436,
+          "confidence_grade": "Cautious",
+          "adjustments": null
+        },
+        "token_address": "4964SXikZQWnCXUoAXQar6tLAv5xRhYS4uQqLUc6pump",
+        "token_type": "meme",
+        "timestamp": "2026-03-14T09:26:12.895946Z",
+        "summary": "Over the last 23.9h, price is flat (+0.0%). No significant whale activity detected, holder count is stable (low holder count), but there are concerns: high inequality, high top 10 concentration. Market trend neutral/mixed. Market Conditions: Fear (F&G: 16, improving). BTC dominance 56.9% (rising). Total market cap -1.82%. Altcoin index: 44 (0). Signal effective for the next 24 hours.",
+        "signal_effectiveness": {
+          "effectiveness_hours": 24,
+          "analysis_window": "Last 23.9 hours",
+          "prediction_window": "Next 24 hours",
+          "signal_valid_from": "2026-03-13T09:26:12.895946Z",
+          "signal_valid_until": "2026-03-15T09:26:12.895946Z",
+          "data_strategy": "Candle data covers partial window; 24h price change from Birdeye when available. Signal calibrated for \u00b124h.",
+          "recent_24h_analysis": {
+            "window_hours": 24,
+            "candles_analyzed": 288,
+            "total_candles_available": 864,
+            "data_freshness": {
+              "latest_candle_age_hours": 0.02,
+              "is_stale": false,
+              "latest_candle_timestamp": "2026-03-14T09:25:00+00:00",
+              "warning": null
+            },
+            "window_actual_hours": 23.9,
+            "price_change_24h_pct": 0.0,
+            "price_current": 2.06e-06,
+            "price_24h_high": 2.06e-06,
+            "price_24h_low": 2.06e-06,
+            "price_24h_range_pct": 0.0,
+            "trend_24h": "sideways",
+            "volume_24h_total": 0.0,
+            "volume_24h_avg": 0.0,
+            "buy_sell_data_source": "no_data",
+            "volatility_24h": 0.0,
+            "price_change_24h_source": "candles"
+          }
+        },
+        "layer_breakdown": {
+          "ml_model": {
+            "signal": "HOLD",
+            "confidence": 0.95,
+            "base_weight": 0.3,
+            "adjusted_weight": 0.6317,
+            "contribution": 0.0,
+            "is_valid": true
+          },
+          "whale_engine": {
+            "signal": "HOLD",
+            "confidence": 0.5,
+            "base_weight": 0.25,
+            "adjusted_weight": 0.0,
+            "contribution": 0.0,
+            "is_valid": false
+          },
+          "technical": {
+            "signal": "HOLD",
+            "confidence": 0.5,
+            "base_weight": 0.1,
+            "adjusted_weight": 0.162,
+            "contribution": 0.0,
+            "is_valid": true
+          },
+          "holder_metrics": {
+            "signal": "SELL",
+            "confidence": 0.2736,
+            "base_weight": 0.15,
+            "adjusted_weight": 0.2063,
+            "contribution": -0.0564,
+            "is_valid": true
+          },
+          "user_profile": {
+            "signal": "HOLD",
+            "confidence": 0.0,
+            "base_weight": 0.2,
+            "adjusted_weight": 0.0,
+            "contribution": 0.0,
+            "is_valid": false
+          }
+        },
+        "layers_used": 3,
+        "agreement_level": 0.6666666666666666,
+        "whale_buy_volume": 0.0,
+        "whale_sell_volume": 0.0,
+        "whale_net_volume": 0.0,
+        "whale_volume_unit": "tokens",
+        "whale_data_source": "no_data",
+        "is_whale_data_stale": true,
+        "dominant_whale_status": "NOT_AVAILABLE",
+        "dominant_whale_inactive_holding_pct": 0.0,
+        "dominant_whale_aging_holding_pct": 0.0,
+        "top_holder_last_activity_hours": null,
+        "gini_coefficient": 0.85,
+        "top10_hold_percent": 99.93415471469672,
+        "dev_hold_percent": 0.0,
+        "sniper_hold_percent": 0.0,
+        "phase": "P3",
+        "safety_overrides_applied": [
+          {
+            "check": "extreme_concentration",
+            "condition": "top10_hold_percent >= 85.0%",
+            "value": 99.9,
+            "original_signal": "HOLD",
+            "new_signal": "SELL",
+            "reason": "EXTREME concentration risk - Top 10 control 99.9% (rug pull risk)"
+          }
+        ],
+        "timing": {
+          "type": "exit",
+          "recommendation": "EXIT_NOW",
+          "confidence": 0.2833333333333333,
+          "final_score": -0.08333333333333333,
+          "reason": "Low liquidity ($3,570) - high slippage risk. CAUTION: Top 10 holders control 99.9% of supply; HIGH INEQUALITY: Gini coefficient 0.85",
+          "wait_minutes": 0,
+          "potential_improvement_pct": 3.1666666666666665,
+          "miss_risk_pct": 8.416666666666666,
+          "warnings": [
+            "CAUTION: Top 10 holders control 99.9% of supply",
+            "HIGH INEQUALITY: Gini coefficient 0.85"
+          ],
+          "degraded": false,
+          "component_scores": {
+            "momentum": 0.0,
+            "volume": 0.0,
+            "liquidity": -0.5,
+            "smart_money": 0.0,
+            "whale": 0.0
+          }
+        },
+        "risk_management": {
+          "suggested_stop_loss": 2.09e-06,
+          "suggested_take_profit": 1.96e-06,
+          "stop_distance_pct": 1.5,
+          "reward_distance_pct": 5.0,
+          "risk_reward_ratio": 3.33,
+          "method": "min_stop_pct_fallback"
+        },
+        "candle_data_freshness": {
+          "latest_candle_age_hours": 0.02,
+          "is_stale": false,
+          "latest_candle_timestamp": "2026-03-14T09:25:00+00:00",
+          "warning": null
+        },
+        "candle_data_source": "birdeye",
+        "data_quality": {
+          "degraded": false,
+          "reason": null,
+          "candle_source": "birdeye",
+          "whale_source": "no_data",
+          "primary_source": "birdeye"
+        },
+        "market_context": {
+          "fear_greed": 16,
+          "fear_greed_change": 1,
+          "altcoin_index": 44,
+          "altcoin_index_change": 0,
+          "btc_dominance": 56.898464,
+          "btc_dominance_change": 0.57,
+          "eth_dominance": 10.1,
+          "eth_dominance_change": 0.9,
+          "total_market_cap": 2483675481090.0,
+          "total_market_cap_change": -1.82,
+          "total_volume_24h": 46954671747.0,
+          "total_volume_24h_change": -7.82,
+          "investment_activity": -35,
+          "active_currencies": 4705,
+          "market_regime": "SIDEWAYS",
+          "market_favorability": 0.16,
+          "is_extreme_fear": false,
+          "is_extreme_greed": false,
+          "is_default": false,
+          "fetched_at": "2026-03-14T09:00:00.166Z"
+        },
+        "execution_time_seconds": 0.8229
+      }
+    },
+    {
+      "payload": {
+        "token_address": "7p9LpWYAPWuzWHAncdgXkU8vdxzqYuo74jgH9UosfQPX",
+        "token_type": "meme"
+      },
+      "response": {
+        "signal": "HOLD",
+        "confidence": 0.5603218103281542,
+        "confidence_grade": "Cautious",
+        "confidence_analysis": {
+          "confidence_before_safety": 0.5603,
+          "confidence_after_safety": 0.5603,
+          "confidence_grade": "Cautious",
+          "adjustments": null
+        },
+        "token_address": "7p9LpWYAPWuzWHAncdgXkU8vdxzqYuo74jgH9UosfQPX",
+        "token_type": "meme",
+        "timestamp": "2026-03-14T09:26:13.823662Z",
+        "summary": "Over the last 23.9h, price is flat (+0.0%). No significant whale activity detected, holder count is stable (low holder count), but there is high inequality. Market trend neutral/mixed. Market Conditions: Fear (F&G: 16, improving). BTC dominance 56.9% (rising). Total market cap -1.82%. Altcoin index: 44 (0). Signal effective for the next 24 hours.",
+        "signal_effectiveness": {
+          "effectiveness_hours": 24,
+          "analysis_window": "Last 23.9 hours",
+          "prediction_window": "Next 24 hours",
+          "signal_valid_from": "2026-03-13T09:26:13.823662Z",
+          "signal_valid_until": "2026-03-15T09:26:13.823662Z",
+          "data_strategy": "Candle data covers partial window; 24h price change from Birdeye when available. Signal calibrated for \u00b124h.",
+          "recent_24h_analysis": {
+            "window_hours": 24,
+            "candles_analyzed": 288,
+            "total_candles_available": 864,
+            "data_freshness": {
+              "latest_candle_age_hours": 0.02,
+              "is_stale": false,
+              "latest_candle_timestamp": "2026-03-14T09:25:00+00:00",
+              "warning": null
+            },
+            "window_actual_hours": 23.9,
+            "price_change_24h_pct": 0.0,
+            "price_current": 1794.93935788,
+            "price_24h_high": 1794.93935788,
+            "price_24h_low": 1794.93935788,
+            "price_24h_range_pct": 0.0,
+            "trend_24h": "sideways",
+            "volume_24h_total": 0.0,
+            "volume_24h_avg": 0.0,
+            "buy_sell_data_source": "no_data",
+            "volatility_24h": 0.0,
+            "price_change_24h_source": "candles"
+          }
+        },
+        "layer_breakdown": {
+          "ml_model": {
+            "signal": "HOLD",
+            "confidence": 1.0,
+            "base_weight": 0.3,
+            "adjusted_weight": 0.6447,
+            "contribution": 0.0,
+            "is_valid": true
+          },
+          "whale_engine": {
+            "signal": "HOLD",
+            "confidence": 0.5,
+            "base_weight": 0.25,
+            "adjusted_weight": 0.0,
+            "contribution": 0.0,
+            "is_valid": false
+          },
+          "technical": {
+            "signal": "HOLD",
+            "confidence": 0.5,
+            "base_weight": 0.1,
+            "adjusted_weight": 0.1612,
+            "contribution": 0.0,
+            "is_valid": true
+          },
+          "holder_metrics": {
+            "signal": "SELL",
+            "confidence": 0.2044,
+            "base_weight": 0.15,
+            "adjusted_weight": 0.1941,
+            "contribution": -0.0397,
+            "is_valid": true
+          },
+          "user_profile": {
+            "signal": "HOLD",
+            "confidence": 0.0,
+            "base_weight": 0.2,
+            "adjusted_weight": 0.0,
+            "contribution": 0.0,
+            "is_valid": false
+          }
+        },
+        "layers_used": 3,
+        "agreement_level": 0.6666666666666666,
+        "whale_buy_volume": 0.0,
+        "whale_sell_volume": 0.0,
+        "whale_net_volume": 0.0,
+        "whale_volume_unit": "tokens",
+        "whale_data_source": "no_data",
+        "is_whale_data_stale": true,
+        "dominant_whale_status": "NOT_AVAILABLE",
+        "dominant_whale_inactive_holding_pct": 0.0,
+        "dominant_whale_aging_holding_pct": 0.0,
+        "top_holder_last_activity_hours": null,
+        "gini_coefficient": 0.85,
+        "top10_hold_percent": 0.3298946609446688,
+        "dev_hold_percent": 0.0,
+        "sniper_hold_percent": 0.0,
+        "phase": "P3",
+        "safety_overrides_applied": null,
+        "timing": {
+          "type": "entry",
+          "recommendation": "WAIT",
+          "confidence": 0.5666666666666667,
+          "final_score": -0.08333333333333333,
+          "reason": "Low liquidity ($0) - high slippage risk. HIGH INEQUALITY: Gini coefficient 1.00",
+          "wait_minutes": 0,
+          "potential_improvement_pct": 1.0,
+          "miss_risk_pct": 3.0,
+          "warnings": [
+            "HIGH INEQUALITY: Gini coefficient 1.00"
+          ],
+          "degraded": false,
+          "component_scores": {
+            "momentum": 0.0,
+            "volume": 0.0,
+            "liquidity": -0.5,
+            "smart_money": 0.0,
+            "whale": 0.0
+          }
+        },
+        "risk_management": null,
+        "candle_data_freshness": {
+          "latest_candle_age_hours": 0.02,
+          "is_stale": false,
+          "latest_candle_timestamp": "2026-03-14T09:25:00+00:00",
+          "warning": null
+        },
+        "candle_data_source": "birdeye",
+        "data_quality": {
+          "degraded": false,
+          "reason": null,
+          "candle_source": "birdeye",
+          "whale_source": "no_data",
+          "primary_source": "birdeye"
+        },
+        "market_context": {
+          "fear_greed": 16,
+          "fear_greed_change": 1,
+          "altcoin_index": 44,
+          "altcoin_index_change": 0,
+          "btc_dominance": 56.898464,
+          "btc_dominance_change": 0.57,
+          "eth_dominance": 10.1,
+          "eth_dominance_change": 0.9,
+          "total_market_cap": 2483675481090.0,
+          "total_market_cap_change": -1.82,
+          "total_volume_24h": 46954671747.0,
+          "total_volume_24h_change": -7.82,
+          "investment_activity": -35,
+          "active_currencies": 4705,
+          "market_regime": "SIDEWAYS",
+          "market_favorability": 0.16,
+          "is_extreme_fear": false,
+          "is_extreme_greed": false,
+          "is_default": false,
+          "fetched_at": "2026-03-14T09:00:00.166Z"
+        },
+        "execution_time_seconds": 0.9196
+      }
+    },
+    {
+      "payload": {
+        "token_address": "7zB1fXsrjQY9cKfeuLKfQ4UnB2qiNCedidrp3wCj2k21",
+        "token_type": "meme"
+      },
+      "response": {
+        "signal": "SELL",
+        "confidence": 0.95,
+        "confidence_grade": "Strong",
+        "confidence_analysis": {
+          "confidence_before_safety": 0.95,
+          "confidence_after_safety": 0.95,
+          "confidence_grade": "Strong",
+          "adjustments": null
+        },
+        "token_address": "7zB1fXsrjQY9cKfeuLKfQ4UnB2qiNCedidrp3wCj2k21",
+        "token_type": "meme",
+        "timestamp": "2026-03-14T09:26:14.740311Z",
+        "summary": "Over the last 23.9h, price is down -1.8% with declining volume and strong sell pressure. Whales are distributing heavily, holder count is stable (low holder count), but there are concerns: high inequality, high top 10 concentration. Market trend leaning bearish. Market Conditions: Fear (F&G: 16, improving). BTC dominance 56.9% (rising). Total market cap -1.82%. Altcoin index: 44 (0). Signal effective for the next 24 hours.",
+        "signal_effectiveness": {
+          "effectiveness_hours": 24,
+          "analysis_window": "Last 23.9 hours",
+          "prediction_window": "Next 24 hours",
+          "signal_valid_from": "2026-03-13T09:26:14.740311Z",
+          "signal_valid_until": "2026-03-15T09:26:14.740311Z",
+          "data_strategy": "Candle data covers partial window; 24h price change from Birdeye when available. Signal calibrated for \u00b124h.",
+          "recent_24h_analysis": {
+            "window_hours": 24,
+            "candles_analyzed": 288,
+            "total_candles_available": 767,
+            "data_freshness": {
+              "latest_candle_age_hours": 0.02,
+              "is_stale": false,
+              "latest_candle_timestamp": "2026-03-14T09:25:00+00:00",
+              "warning": null
+            },
+            "window_actual_hours": 23.9,
+            "price_change_24h_pct": -1.76,
+            "price_current": 1.71e-06,
+            "price_24h_high": 1.74e-06,
+            "price_24h_low": 1.71e-06,
+            "price_24h_range_pct": 1.79,
+            "trend_24h": "bearish",
+            "volume_24h_total": 1803544.63,
+            "volume_24h_avg": 6262.31,
+            "volume_trend_24h": "decreasing",
+            "volume_trend_change_pct": -95.0,
+            "buy_sell_data_source": "birdeye_24h",
+            "volatility_24h": 0.000739,
+            "price_change_24h_source": "candles",
+            "buy_pressure_24h": 0.0,
+            "sell_pressure_24h": 1.0,
+            "net_flow_24h": -1803544.63,
+            "buy_sell_ratio_24h": 0.0
+          }
+        },
+        "layer_breakdown": {
+          "ml_model": {
+            "signal": "SELL",
+            "confidence": 0.8,
+            "base_weight": 0.3,
+            "adjusted_weight": 0.3999,
+            "contribution": -0.3199,
+            "is_valid": true
+          },
+          "whale_engine": {
+            "signal": "SELL",
+            "confidence": 0.9,
+            "base_weight": 0.25,
+            "adjusted_weight": 0.3518,
+            "contribution": -0.3166,
+            "is_valid": true
+          },
+          "technical": {
+            "signal": "HOLD",
+            "confidence": 0.5,
+            "base_weight": 0.1,
+            "adjusted_weight": 0.1111,
+            "contribution": 0.0,
+            "is_valid": true
+          },
+          "holder_metrics": {
+            "signal": "SELL",
+            "confidence": 0.2348,
+            "base_weight": 0.15,
+            "adjusted_weight": 0.1372,
+            "contribution": -0.0322,
+            "is_valid": true
+          },
+          "user_profile": {
+            "signal": "HOLD",
+            "confidence": 0.0,
+            "base_weight": 0.2,
+            "adjusted_weight": 0.0,
+            "contribution": 0.0,
+            "is_valid": false
+          }
+        },
+        "layers_used": 4,
+        "agreement_level": 0.75,
+        "whale_buy_volume": 0.0,
+        "whale_sell_volume": 1803544.632579,
+        "whale_net_volume": -1803544.632579,
+        "whale_volume_unit": "tokens",
+        "whale_data_source": "birdeye_24h",
+        "is_whale_data_stale": false,
+        "dominant_whale_status": "NOT_AVAILABLE",
+        "dominant_whale_inactive_holding_pct": 0.0,
+        "dominant_whale_aging_holding_pct": 0.0,
+        "top_holder_last_activity_hours": null,
+        "gini_coefficient": 0.95,
+        "top10_hold_percent": 99.69566191445439,
+        "dev_hold_percent": 0.0,
+        "sniper_hold_percent": 0.0,
+        "phase": "P1",
+        "safety_overrides_applied": null,
+        "timing": {
+          "type": "exit",
+          "recommendation": "WAIT_TO_EXIT",
+          "confidence": 0.3611111111111111,
+          "final_score": 0.19444444444444445,
+          "reason": "Whales distributing - exit urgently; Heavy selling (100% sell, 24h aggregate) - exit urgently. CAUTION: Top 10 holders control 99.7% of supply; HIGH INEQUALITY: Gini coefficient 0.95",
+          "wait_minutes": 5,
+          "potential_improvement_pct": 2.9722222222222223,
+          "miss_risk_pct": 7.430555555555555,
+          "warnings": [
+            "CAUTION: Top 10 holders control 99.7% of supply",
+            "HIGH INEQUALITY: Gini coefficient 0.95"
+          ],
+          "degraded": false,
+          "component_scores": {
+            "momentum": 0.0,
+            "volume": 0.5,
+            "liquidity": -0.5,
+            "smart_money": 0.0,
+            "whale": 1.0
+          }
+        },
+        "risk_management": null,
+        "candle_data_freshness": {
+          "latest_candle_age_hours": 0.02,
+          "is_stale": false,
+          "latest_candle_timestamp": "2026-03-14T09:25:00+00:00",
+          "warning": null
+        },
+        "candle_data_source": "birdeye",
+        "data_quality": {
+          "degraded": false,
+          "reason": null,
+          "candle_source": "birdeye",
+          "whale_source": "birdeye_24h",
+          "primary_source": "birdeye"
+        },
+        "market_context": {
+          "fear_greed": 16,
+          "fear_greed_change": 1,
+          "altcoin_index": 44,
+          "altcoin_index_change": 0,
+          "btc_dominance": 56.898464,
+          "btc_dominance_change": 0.57,
+          "eth_dominance": 10.1,
+          "eth_dominance_change": 0.9,
+          "total_market_cap": 2483675481090.0,
+          "total_market_cap_change": -1.82,
+          "total_volume_24h": 46954671747.0,
+          "total_volume_24h_change": -7.82,
+          "investment_activity": -35,
+          "active_currencies": 4705,
+          "market_regime": "SIDEWAYS",
+          "market_favorability": 0.16,
+          "is_extreme_fear": false,
+          "is_extreme_greed": false,
+          "is_default": false,
+          "fetched_at": "2026-03-14T09:00:00.166Z"
+        },
+        "execution_time_seconds": 0.9082
+      }
+    },
+    {
+      "payload": {
+        "token_address": "CVrPv5L4pCAvE8Q1o17GgFMBaLC7U4MVvxK5QPq4pump",
+        "token_type": "meme"
+      },
+      "response": {
+        "signal": "SELL",
+        "confidence": 0.3,
+        "confidence_grade": "Weak",
+        "confidence_analysis": {
+          "confidence_before_safety": 0.3,
+          "confidence_after_safety": 0.3,
+          "confidence_grade": "Weak",
+          "adjustments": null
+        },
+        "token_address": "CVrPv5L4pCAvE8Q1o17GgFMBaLC7U4MVvxK5QPq4pump",
+        "token_type": "meme",
+        "timestamp": "2026-03-14T09:26:16.029276Z",
+        "summary": "Over the last 23.9h, price is up +2.8% with declining volume and strong buy pressure. Whales are accumulating moderately, holder count is stable (low holder count), but there are concerns: high inequality, high top 10 concentration. Market trend leaning bullish. Market Conditions: Fear (F&G: 16, improving). BTC dominance 56.9% (rising). Total market cap -1.82%. Altcoin index: 44 (0). Signal effective for the next 24 hours.",
+        "signal_effectiveness": {
+          "effectiveness_hours": 24,
+          "analysis_window": "Last 23.9 hours",
+          "prediction_window": "Next 24 hours",
+          "signal_valid_from": "2026-03-13T09:26:16.029276Z",
+          "signal_valid_until": "2026-03-15T09:26:16.029276Z",
+          "data_strategy": "Candle data covers partial window; 24h price change from Birdeye when available. Signal calibrated for \u00b124h.",
+          "recent_24h_analysis": {
+            "window_hours": 24,
+            "candles_analyzed": 288,
+            "total_candles_available": 864,
+            "data_freshness": {
+              "latest_candle_age_hours": 0.02,
+              "is_stale": false,
+              "latest_candle_timestamp": "2026-03-14T09:25:00+00:00",
+              "warning": null
+            },
+            "window_actual_hours": 23.9,
+            "price_change_24h_pct": 2.77,
+            "price_current": 0.00011402,
+            "price_24h_high": 0.00011402,
+            "price_24h_low": 0.00011095,
+            "price_24h_range_pct": 2.77,
+            "trend_24h": "bullish",
+            "volume_24h_total": 115709.78,
+            "volume_24h_avg": 401.77,
+            "volume_trend_24h": "decreasing",
+            "volume_trend_change_pct": -95.0,
+            "buy_sell_data_source": "birdeye_24h",
+            "volatility_24h": 0.001489,
+            "price_change_24h_source": "candles",
+            "buy_pressure_24h": 0.6667,
+            "sell_pressure_24h": 0.3333,
+            "net_flow_24h": 38577.71,
+            "buy_sell_ratio_24h": 2.0003
+          }
+        },
+        "layer_breakdown": {
+          "ml_model": {
+            "signal": "HOLD",
+            "confidence": 0.9333,
+            "base_weight": 0.3,
+            "adjusted_weight": 0.4388,
+            "contribution": 0.0,
+            "is_valid": true
+          },
+          "whale_engine": {
+            "signal": "BUY",
+            "confidence": 0.6334,
+            "base_weight": 0.25,
+            "adjusted_weight": 0.309,
+            "contribution": 0.1957,
+            "is_valid": true
+          },
+          "technical": {
+            "signal": "HOLD",
+            "confidence": 0.5,
+            "base_weight": 0.1,
+            "adjusted_weight": 0.1135,
+            "contribution": 0.0,
+            "is_valid": true
+          },
+          "holder_metrics": {
+            "signal": "SELL",
+            "confidence": 0.222,
+            "base_weight": 0.15,
+            "adjusted_weight": 0.1387,
+            "contribution": -0.0308,
+            "is_valid": true
+          },
+          "user_profile": {
+            "signal": "HOLD",
+            "confidence": 0.0,
+            "base_weight": 0.2,
+            "adjusted_weight": 0.0,
+            "contribution": 0.0,
+            "is_valid": false
+          }
+        },
+        "layers_used": 4,
+        "agreement_level": 0.5,
+        "whale_buy_volume": 77143.744492,
+        "whale_sell_volume": 38566.034421,
+        "whale_net_volume": 38577.710071,
+        "whale_volume_unit": "tokens",
+        "whale_data_source": "birdeye_24h",
+        "is_whale_data_stale": false,
+        "dominant_whale_status": "NOT_AVAILABLE",
+        "dominant_whale_inactive_holding_pct": 0.0,
+        "dominant_whale_aging_holding_pct": 0.0,
+        "top_holder_last_activity_hours": null,
+        "gini_coefficient": 0.95,
+        "top10_hold_percent": 99.21928393982321,
+        "dev_hold_percent": 0.0,
+        "sniper_hold_percent": 0.0,
+        "phase": "P2",
+        "safety_overrides_applied": [
+          {
+            "check": "extreme_concentration",
+            "condition": "top10_hold_percent >= 85.0%",
+            "value": 99.2,
+            "original_signal": "HOLD",
+            "new_signal": "SELL",
+            "reason": "EXTREME concentration risk - Top 10 control 99.2% (rug pull risk)"
+          }
+        ],
+        "timing": {
+          "type": "exit",
+          "recommendation": "WAIT_TO_EXIT",
+          "confidence": 0.33611111111111114,
+          "final_score": -0.1611111111111111,
+          "reason": "Whales accumulating - may wait for higher; Low liquidity ($4) - high slippage risk. CAUTION: Top 10 holders control 99.2% of supply; HIGH INEQUALITY: Gini coefficient 0.95",
+          "wait_minutes": 9,
+          "potential_improvement_pct": 2.8055555555555554,
+          "miss_risk_pct": 7.013888888888888,
+          "warnings": [
+            "CAUTION: Top 10 holders control 99.2% of supply",
+            "HIGH INEQUALITY: Gini coefficient 0.95"
+          ],
+          "degraded": false,
+          "component_scores": {
+            "momentum": 0.3,
+            "volume": -0.2,
+            "liquidity": -0.5,
+            "smart_money": 0.0,
+            "whale": -0.7
+          }
+        },
+        "risk_management": null,
+        "candle_data_freshness": {
+          "latest_candle_age_hours": 0.02,
+          "is_stale": false,
+          "latest_candle_timestamp": "2026-03-14T09:25:00+00:00",
+          "warning": null
+        },
+        "candle_data_source": "birdeye",
+        "data_quality": {
+          "degraded": false,
+          "reason": null,
+          "candle_source": "birdeye",
+          "whale_source": "birdeye_24h",
+          "primary_source": "birdeye"
+        },
+        "market_context": {
+          "fear_greed": 16,
+          "fear_greed_change": 1,
+          "altcoin_index": 44,
+          "altcoin_index_change": 0,
+          "btc_dominance": 56.898464,
+          "btc_dominance_change": 0.57,
+          "eth_dominance": 10.1,
+          "eth_dominance_change": 0.9,
+          "total_market_cap": 2483675481090.0,
+          "total_market_cap_change": -1.82,
+          "total_volume_24h": 46954671747.0,
+          "total_volume_24h_change": -7.82,
+          "investment_activity": -35,
+          "active_currencies": 4705,
+          "market_regime": "SIDEWAYS",
+          "market_favorability": 0.16,
+          "is_extreme_fear": false,
+          "is_extreme_greed": false,
+          "is_default": false,
+          "fetched_at": "2026-03-14T09:00:00.166Z"
+        },
+        "execution_time_seconds": 1.2804
+      }
+    },
+    {
+      "payload": {
+        "token_address": "8tMovZEGRhB82fnHXqTAExGKpWr217mL59Knk6QQpump",
+        "token_type": "meme"
+      },
+      "response": {
+        "signal": "HOLD",
+        "confidence": 0.7,
+        "confidence_grade": "Moderate",
+        "confidence_analysis": {
+          "confidence_before_safety": 0.7,
+          "confidence_after_safety": 0.7,
+          "confidence_grade": "Moderate",
+          "adjustments": null
+        },
+        "token_address": "8tMovZEGRhB82fnHXqTAExGKpWr217mL59Knk6QQpump",
+        "token_type": "meme",
+        "timestamp": "2026-03-14T09:26:17.507986Z",
+        "summary": "Over the last 23.9h, price is down -14.2% with declining volume and moderate sell pressure. Whale activity is stable, holder count is stable (low holder count), but there is high inequality. Market trend strongly bearish. Market Conditions: Fear (F&G: 16, improving). BTC dominance 56.9% (rising). Total market cap -1.82%. Altcoin index: 44 (0). Signal effective for the next 24 hours.",
+        "signal_effectiveness": {
+          "effectiveness_hours": 24,
+          "analysis_window": "Last 23.9 hours",
+          "prediction_window": "Next 24 hours",
+          "signal_valid_from": "2026-03-13T09:26:17.507986Z",
+          "signal_valid_until": "2026-03-15T09:26:17.507986Z",
+          "data_strategy": "Candle data covers partial window; 24h price change from Birdeye when available. Signal calibrated for \u00b124h.",
+          "recent_24h_analysis": {
+            "window_hours": 24,
+            "candles_analyzed": 288,
+            "total_candles_available": 864,
+            "data_freshness": {
+              "latest_candle_age_hours": 0.02,
+              "is_stale": false,
+              "latest_candle_timestamp": "2026-03-14T09:25:00+00:00",
+              "warning": null
+            },
+            "window_actual_hours": 23.9,
+            "price_change_24h_pct": -14.22,
+            "price_current": 2.66e-05,
+            "price_24h_high": 3.102e-05,
+            "price_24h_low": 2.23e-05,
+            "price_24h_range_pct": 39.11,
+            "trend_24h": "strongly_bearish",
+            "volume_24h_total": 184250944.12,
+            "volume_24h_avg": 639760.22,
+            "volume_trend_24h": "decreasing",
+            "volume_trend_change_pct": -60.61,
+            "buy_sell_data_source": "birdeye_24h",
+            "volatility_24h": 0.017155,
+            "price_change_24h_source": "candles",
+            "buy_pressure_24h": 0.4594,
+            "sell_pressure_24h": 0.5406,
+            "net_flow_24h": -14956187.29,
+            "buy_sell_ratio_24h": 0.8499
+          }
+        },
+        "layer_breakdown": {
+          "ml_model": {
+            "signal": "HOLD",
+            "confidence": 0.9338,
+            "base_weight": 0.3,
+            "adjusted_weight": 0.4359,
+            "contribution": 0.0,
+            "is_valid": true
+          },
+          "whale_engine": {
+            "signal": "HOLD",
+            "confidence": 0.5324,
+            "base_weight": 0.25,
+            "adjusted_weight": 0.2879,
+            "contribution": 0.0,
+            "is_valid": true
+          },
+          "technical": {
+            "signal": "HOLD",
+            "confidence": 0.5,
+            "base_weight": 0.1,
+            "adjusted_weight": 0.1127,
+            "contribution": 0.0,
+            "is_valid": true
+          },
+          "holder_metrics": {
+            "signal": "HOLD",
+            "confidence": 0.4501,
+            "base_weight": 0.15,
+            "adjusted_weight": 0.1635,
+            "contribution": 0.0,
+            "is_valid": true
+          },
+          "user_profile": {
+            "signal": "HOLD",
+            "confidence": 0.0,
+            "base_weight": 0.2,
+            "adjusted_weight": 0.0,
+            "contribution": 0.0,
+            "is_valid": false
+          }
+        },
+        "layers_used": 4,
+        "agreement_level": 1.0,
+        "whale_buy_volume": 84714333.369542,
+        "whale_sell_volume": 99670520.66032198,
+        "whale_net_volume": -14956187.290779978,
+        "whale_volume_unit": "tokens",
+        "whale_data_source": "birdeye_24h",
+        "is_whale_data_stale": false,
+        "dominant_whale_status": "NOT_AVAILABLE",
+        "dominant_whale_inactive_holding_pct": 0.0,
+        "dominant_whale_aging_holding_pct": 0.0,
+        "top_holder_last_activity_hours": null,
+        "gini_coefficient": 0.6981677187203366,
+        "top10_hold_percent": 55.103532478724894,
+        "dev_hold_percent": 0.0,
+        "sniper_hold_percent": 0.0,
+        "phase": "P2",
+        "safety_overrides_applied": null,
+        "timing": {
+          "type": "entry",
+          "recommendation": "WAIT",
+          "confidence": 0.24111111111111108,
+          "final_score": 0.022222222222222227,
+          "reason": "RSI overbought (78.7); Whales activity stable. Timing aligned with signal: HOLD suggests no position \u2014 ENTER_NOW overridden to WAIT",
+          "wait_minutes": 60,
+          "potential_improvement_pct": 0.5,
+          "miss_risk_pct": 9.88888888888889,
+          "warnings": [
+            "Timing aligned with signal: HOLD suggests no position \u2014 ENTER_NOW overridden to WAIT"
+          ],
+          "degraded": false,
+          "component_scores": {
+            "momentum": 0.2,
+            "volume": 0.0,
+            "liquidity": 0.0,
+            "smart_money": 0.0,
+            "whale": -0.2
+          }
+        },
+        "risk_management": null,
+        "candle_data_freshness": {
+          "latest_candle_age_hours": 0.02,
+          "is_stale": false,
+          "latest_candle_timestamp": "2026-03-14T09:25:00+00:00",
+          "warning": null
+        },
+        "candle_data_source": "birdeye",
+        "data_quality": {
+          "degraded": false,
+          "reason": null,
+          "candle_source": "birdeye",
+          "whale_source": "birdeye_24h",
+          "primary_source": "birdeye"
+        },
+        "market_context": {
+          "fear_greed": 16,
+          "fear_greed_change": 1,
+          "altcoin_index": 44,
+          "altcoin_index_change": 0,
+          "btc_dominance": 56.898464,
+          "btc_dominance_change": 0.57,
+          "eth_dominance": 10.1,
+          "eth_dominance_change": 0.9,
+          "total_market_cap": 2483675481090.0,
+          "total_market_cap_change": -1.82,
+          "total_volume_24h": 46954671747.0,
+          "total_volume_24h_change": -7.82,
+          "investment_activity": -35,
+          "active_currencies": 4705,
+          "market_regime": "SIDEWAYS",
+          "market_favorability": 0.16,
+          "is_extreme_fear": false,
+          "is_extreme_greed": false,
+          "is_default": false,
+          "fetched_at": "2026-03-14T09:00:00.166Z"
+        },
+        "execution_time_seconds": 1.4723
+      }
+    },
+    {
+      "payload": {
+        "token_address": "CDTxbYAh7sdf9Z4pfRcJJDnptZvSCdzrG6zuqGbLbonk",
+        "token_type": "meme"
+      },
+      "response": {
+        "signal": "SELL",
+        "confidence": 0.5440393803875818,
+        "confidence_grade": "Cautious",
+        "confidence_analysis": {
+          "confidence_before_safety": 0.544,
+          "confidence_after_safety": 0.544,
+          "confidence_grade": "Cautious",
+          "adjustments": null
+        },
+        "token_address": "CDTxbYAh7sdf9Z4pfRcJJDnptZvSCdzrG6zuqGbLbonk",
+        "token_type": "meme",
+        "timestamp": "2026-03-14T09:26:18.434640Z",
+        "summary": "Over the last 23.9h, price is flat (+0.0%). No significant whale activity detected, holder count is stable (low holder count), but there are concerns: high inequality, high top 10 concentration. Market trend neutral/mixed. Market Conditions: Fear (F&G: 16, improving). BTC dominance 56.9% (rising). Total market cap -1.82%. Altcoin index: 44 (0). Signal effective for the next 24 hours.",
+        "signal_effectiveness": {
+          "effectiveness_hours": 24,
+          "analysis_window": "Last 23.9 hours",
+          "prediction_window": "Next 24 hours",
+          "signal_valid_from": "2026-03-13T09:26:18.434640Z",
+          "signal_valid_until": "2026-03-15T09:26:18.434640Z",
+          "data_strategy": "Candle data covers partial window; 24h price change from Birdeye when available. Signal calibrated for \u00b124h.",
+          "recent_24h_analysis": {
+            "window_hours": 24,
+            "candles_analyzed": 288,
+            "total_candles_available": 786,
+            "data_freshness": {
+              "latest_candle_age_hours": 0.02,
+              "is_stale": false,
+              "latest_candle_timestamp": "2026-03-14T09:25:00+00:00",
+              "warning": null
+            },
+            "window_actual_hours": 23.9,
+            "price_change_24h_pct": 0.0,
+            "price_current": 2e-06,
+            "price_24h_high": 2e-06,
+            "price_24h_low": 2e-06,
+            "price_24h_range_pct": 0.0,
+            "trend_24h": "sideways",
+            "volume_24h_total": 0.0,
+            "volume_24h_avg": 0.0,
+            "buy_sell_data_source": "no_data",
+            "volatility_24h": 0.0,
+            "price_change_24h_source": "candles"
+          }
+        },
+        "layer_breakdown": {
+          "ml_model": {
+            "signal": "HOLD",
+            "confidence": 0.95,
+            "base_weight": 0.3,
+            "adjusted_weight": 0.6319,
+            "contribution": 0.0,
+            "is_valid": true
+          },
+          "whale_engine": {
+            "signal": "HOLD",
+            "confidence": 0.5,
+            "base_weight": 0.25,
+            "adjusted_weight": 0.0,
+            "contribution": 0.0,
+            "is_valid": false
+          },
+          "technical": {
+            "signal": "HOLD",
+            "confidence": 0.5,
+            "base_weight": 0.1,
+            "adjusted_weight": 0.162,
+            "contribution": 0.0,
+            "is_valid": true
+          },
+          "holder_metrics": {
+            "signal": "SELL",
+            "confidence": 0.2716,
+            "base_weight": 0.15,
+            "adjusted_weight": 0.206,
+            "contribution": -0.056,
+            "is_valid": true
+          },
+          "user_profile": {
+            "signal": "HOLD",
+            "confidence": 0.0,
+            "base_weight": 0.2,
+            "adjusted_weight": 0.0,
+            "contribution": 0.0,
+            "is_valid": false
+          }
+        },
+        "layers_used": 3,
+        "agreement_level": 0.6666666666666666,
+        "whale_buy_volume": 0.0,
+        "whale_sell_volume": 0.0,
+        "whale_net_volume": 0.0,
+        "whale_volume_unit": "tokens",
+        "whale_data_source": "no_data",
+        "is_whale_data_stale": true,
+        "dominant_whale_status": "NOT_AVAILABLE",
+        "dominant_whale_inactive_holding_pct": 0.0,
+        "dominant_whale_aging_holding_pct": 0.0,
+        "top_holder_last_activity_hours": null,
+        "gini_coefficient": 0.85,
+        "top10_hold_percent": 99.7975707725528,
+        "dev_hold_percent": 0.0,
+        "sniper_hold_percent": 0.0,
+        "phase": "P1",
+        "safety_overrides_applied": [
+          {
+            "check": "extreme_concentration",
+            "condition": "top10_hold_percent >= 85.0%",
+            "value": 99.8,
+            "original_signal": "HOLD",
+            "new_signal": "SELL",
+            "reason": "EXTREME concentration risk - Top 10 control 99.8% (rug pull risk)"
+          }
+        ],
+        "timing": {
+          "type": "exit",
+          "recommendation": "EXIT_NOW",
+          "confidence": 0.2833333333333333,
+          "final_score": -0.08333333333333333,
+          "reason": "Low liquidity ($3,545) - high slippage risk. CAUTION: Top 10 holders control 99.8% of supply; HIGH INEQUALITY: Gini coefficient 0.85",
+          "wait_minutes": 0,
+          "potential_improvement_pct": 3.1666666666666665,
+          "miss_risk_pct": 8.416666666666666,
+          "warnings": [
+            "CAUTION: Top 10 holders control 99.8% of supply",
+            "HIGH INEQUALITY: Gini coefficient 0.85"
+          ],
+          "degraded": false,
+          "component_scores": {
+            "momentum": 0.0,
+            "volume": 0.0,
+            "liquidity": -0.5,
+            "smart_money": 0.0,
+            "whale": 0.0
+          }
+        },
+        "risk_management": {
+          "suggested_stop_loss": 2.03e-06,
+          "suggested_take_profit": 1.9e-06,
+          "stop_distance_pct": 1.5,
+          "reward_distance_pct": 5.0,
+          "risk_reward_ratio": 3.33,
+          "method": "min_stop_pct_fallback"
+        },
+        "candle_data_freshness": {
+          "latest_candle_age_hours": 0.02,
+          "is_stale": false,
+          "latest_candle_timestamp": "2026-03-14T09:25:00+00:00",
+          "warning": null
+        },
+        "candle_data_source": "birdeye",
+        "data_quality": {
+          "degraded": false,
+          "reason": null,
+          "candle_source": "birdeye",
+          "whale_source": "no_data",
+          "primary_source": "birdeye"
+        },
+        "market_context": {
+          "fear_greed": 16,
+          "fear_greed_change": 1,
+          "altcoin_index": 44,
+          "altcoin_index_change": 0,
+          "btc_dominance": 56.898464,
+          "btc_dominance_change": 0.57,
+          "eth_dominance": 10.1,
+          "eth_dominance_change": 0.9,
+          "total_market_cap": 2483675481090.0,
+          "total_market_cap_change": -1.82,
+          "total_volume_24h": 46954671747.0,
+          "total_volume_24h_change": -7.82,
+          "investment_activity": -35,
+          "active_currencies": 4705,
+          "market_regime": "SIDEWAYS",
+          "market_favorability": 0.16,
+          "is_extreme_fear": false,
+          "is_extreme_greed": false,
+          "is_default": false,
+          "fetched_at": "2026-03-14T09:00:00.166Z"
+        },
+        "execution_time_seconds": 0.9228
+      }
+    },
+    {
+      "payload": {
+        "token_address": "6AJcP7wuLwmRYLBNbi825wgguaPsWzPBEHcHndpRpump",
+        "token_type": "meme"
+      },
+      "response": {
+        "signal": "HOLD",
+        "confidence": 0.7,
+        "confidence_grade": "Moderate",
+        "confidence_analysis": {
+          "confidence_before_safety": 0.7,
+          "confidence_after_safety": 0.7,
+          "confidence_grade": "Moderate",
+          "adjustments": null
+        },
+        "token_address": "6AJcP7wuLwmRYLBNbi825wgguaPsWzPBEHcHndpRpump",
+        "token_type": "meme",
+        "timestamp": "2026-03-14T09:26:20.126941Z",
+        "summary": "Over the last 23.9h, price is down -1.3% with declining volume and moderate sell pressure. Whale activity is stable, holder count is stable (low holder count), but there is high inequality. Market trend leaning bearish. Market Conditions: Fear (F&G: 16, improving). BTC dominance 56.9% (rising). Total market cap -1.82%. Altcoin index: 44 (0). Signal effective for the next 24 hours.",
+        "signal_effectiveness": {
+          "effectiveness_hours": 24,
+          "analysis_window": "Last 23.9 hours",
+          "prediction_window": "Next 24 hours",
+          "signal_valid_from": "2026-03-13T09:26:20.126941Z",
+          "signal_valid_until": "2026-03-15T09:26:20.126941Z",
+          "data_strategy": "Candle data covers partial window; 24h price change from Birdeye when available. Signal calibrated for \u00b124h.",
+          "recent_24h_analysis": {
+            "window_hours": 24,
+            "candles_analyzed": 288,
+            "total_candles_available": 864,
+            "data_freshness": {
+              "latest_candle_age_hours": 0.02,
+              "is_stale": false,
+              "latest_candle_timestamp": "2026-03-14T09:25:00+00:00",
+              "warning": null
+            },
+            "window_actual_hours": 23.9,
+            "price_change_24h_pct": -1.27,
+            "price_current": 0.01811542,
+            "price_24h_high": 0.01945506,
+            "price_24h_low": 0.01799805,
+            "price_24h_range_pct": 8.1,
+            "trend_24h": "bearish",
+            "volume_24h_total": 23783195.02,
+            "volume_24h_avg": 82580.54,
+            "volume_trend_24h": "decreasing",
+            "volume_trend_change_pct": -28.71,
+            "buy_sell_data_source": "birdeye_24h",
+            "volatility_24h": 0.004083,
+            "price_change_24h_source": "candles",
+            "buy_pressure_24h": 0.4999,
+            "sell_pressure_24h": 0.5001,
+            "net_flow_24h": -6483.48,
+            "buy_sell_ratio_24h": 0.9995
+          }
+        },
+        "layer_breakdown": {
+          "ml_model": {
+            "signal": "HOLD",
+            "confidence": 0.9501,
+            "base_weight": 0.3,
+            "adjusted_weight": 0.4421,
+            "contribution": 0.0,
+            "is_valid": true
+          },
+          "whale_engine": {
+            "signal": "HOLD",
+            "confidence": 0.5001,
+            "base_weight": 0.25,
+            "adjusted_weight": 0.2834,
+            "contribution": 0.0,
+            "is_valid": true
+          },
+          "technical": {
+            "signal": "HOLD",
+            "confidence": 0.5,
+            "base_weight": 0.1,
+            "adjusted_weight": 0.1134,
+            "contribution": 0.0,
+            "is_valid": true
+          },
+          "holder_metrics": {
+            "signal": "HOLD",
+            "confidence": 0.4209,
+            "base_weight": 0.15,
+            "adjusted_weight": 0.1611,
+            "contribution": 0.0,
+            "is_valid": true
+          },
+          "user_profile": {
+            "signal": "HOLD",
+            "confidence": 0.0,
+            "base_weight": 0.2,
+            "adjusted_weight": 0.0,
+            "contribution": 0.0,
+            "is_valid": false
+          }
+        },
+        "layers_used": 4,
+        "agreement_level": 1.0,
+        "whale_buy_volume": 11924077.017631002,
+        "whale_sell_volume": 11930560.501095993,
+        "whale_net_volume": -6483.483464991674,
+        "whale_volume_unit": "tokens",
+        "whale_data_source": "birdeye_24h",
+        "is_whale_data_stale": false,
+        "dominant_whale_status": "NOT_AVAILABLE",
+        "dominant_whale_inactive_holding_pct": 0.0,
+        "dominant_whale_aging_holding_pct": 0.0,
+        "top_holder_last_activity_hours": null,
+        "gini_coefficient": 0.6825867817975932,
+        "top10_hold_percent": 47.4246290141092,
+        "dev_hold_percent": 0.0,
+        "sniper_hold_percent": 0.0,
+        "phase": "P4",
+        "safety_overrides_applied": null,
+        "timing": {
+          "type": "entry",
+          "recommendation": "WAIT",
+          "confidence": 0.2333333333333333,
+          "final_score": 0.016666666666666663,
+          "reason": "High liquidity ($2,061,364); Whales activity stable. Timing aligned with signal: HOLD suggests no position \u2014 ENTER_NOW overridden to WAIT",
+          "wait_minutes": 60,
+          "potential_improvement_pct": 0.5,
+          "miss_risk_pct": 9.916666666666666,
+          "warnings": [
+            "Timing aligned with signal: HOLD suggests no position \u2014 ENTER_NOW overridden to WAIT"
+          ],
+          "degraded": false,
+          "component_scores": {
+            "momentum": 0.0,
+            "volume": 0.0,
+            "liquidity": 0.3,
+            "smart_money": 0.0,
+            "whale": -0.2
+          }
+        },
+        "risk_management": null,
+        "candle_data_freshness": {
+          "latest_candle_age_hours": 0.02,
+          "is_stale": false,
+          "latest_candle_timestamp": "2026-03-14T09:25:00+00:00",
+          "warning": null
+        },
+        "candle_data_source": "birdeye",
+        "data_quality": {
+          "degraded": false,
+          "reason": null,
+          "candle_source": "birdeye",
+          "whale_source": "birdeye_24h",
+          "primary_source": "birdeye"
+        },
+        "market_context": {
+          "fear_greed": 16,
+          "fear_greed_change": 1,
+          "altcoin_index": 44,
+          "altcoin_index_change": 0,
+          "btc_dominance": 56.898464,
+          "btc_dominance_change": 0.57,
+          "eth_dominance": 10.1,
+          "eth_dominance_change": 0.9,
+          "total_market_cap": 2483675481090.0,
+          "total_market_cap_change": -1.82,
+          "total_volume_24h": 46954671747.0,
+          "total_volume_24h_change": -7.82,
+          "investment_activity": -35,
+          "active_currencies": 4705,
+          "market_regime": "SIDEWAYS",
+          "market_favorability": 0.16,
+          "is_extreme_fear": false,
+          "is_extreme_greed": false,
+          "is_default": false,
+          "fetched_at": "2026-03-14T09:00:00.166Z"
+        },
+        "execution_time_seconds": 1.6847
+      }
+    }
+  ]
+}

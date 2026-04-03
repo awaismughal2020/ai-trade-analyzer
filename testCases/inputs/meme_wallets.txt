@@ -1,0 +1,8 @@
+# Meme wallet addresses - one per line. For future use with /predict/with-user or wallet-specific tests.
+# Edit this file when you add meme wallet testing.
+
+62qEWURTpb8RNqoPCrjaoRcfU4PneigVKbiuGtin2Wb4
+FSfiJdsybM4zc1jE2H6hBUjE4epKiTZWoR47SfkNYQFZ
+EzCFopHmWkbm4rwRu8YQwTqNq5oRXQC9KaG8sYqjDQRB
+62qEWURTpb8RNqoPCrjaoRcfU4PneigVKbiuGtin2Wb4
+

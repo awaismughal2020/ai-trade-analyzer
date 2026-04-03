@@ -1,0 +1,58 @@
+version: '3.8'
+
+services:
+  coin-analyzer:
+    build: .
+    container_name: coin-analyzer
+    # Port mapping based on ENVIRONMENT:
+    # - production (default): 7800:7800
+    # - development: 8900:8900
+    ports:
+      - "${APP_PORT:-7800}:${APP_PORT:-7800}"
+    environment:
+      # Environment mode: "production" (port 7800) or "development" (port 8900)
+      - ENVIRONMENT=${ENVIRONMENT:-production}
+      - APP_PORT=${APP_PORT:-7800}
+      # API Configuration
+      - INTERNAL_API_BASE_URL=${INTERNAL_API_BASE_URL:-http://52.3.148.51:3000}
+      - MEME_API_BASE_URL=${MEME_API_BASE_URL:-http://52.3.148.51:3000}
+      - BIRDEYE_API_KEY=${BIRDEYE_API_KEY:-}
+      - OPENAI_API_KEY=${OPENAI_API_KEY:-}
+      # Rate Limiting Configuration
+      - MAX_CONCURRENT_REQUESTS=${MAX_CONCURRENT_REQUESTS:-15}
+      - REQUESTS_PER_SECOND=${REQUESTS_PER_SECOND:-50}
+      - MIN_REQUEST_INTERVAL=${MIN_REQUEST_INTERVAL:-0.05}
+      # Retry and Timeout Configuration
+      - REQUEST_TIMEOUT=${REQUEST_TIMEOUT:-10}
+      - MAX_RETRIES=${MAX_RETRIES:-2}
+      - CONNECTION_COOLDOWN=${CONNECTION_COOLDOWN:-2.0}
+      - CIRCUIT_BREAKER_THRESHOLD=${CIRCUIT_BREAKER_THRESHOLD:-5}
+      - CIRCUIT_BREAKER_RESET=${CIRCUIT_BREAKER_RESET:-30.0}
+      - REQUEST_TIMEOUT_SECONDS=${REQUEST_TIMEOUT_SECONDS:-120}
+      # Meme prediction data source
+      - MEME_PRIMARY_DATA_SOURCE=${MEME_PRIMARY_DATA_SOURCE:-birdeye}
+      - MEME_BIRDEYE_PRIMARY_TIMEOUT_SECONDS=${MEME_BIRDEYE_PRIMARY_TIMEOUT_SECONDS:-28}
+      - MEME_BIRDEYE_PER_CALL_TIMEOUT_SECONDS=${MEME_BIRDEYE_PER_CALL_TIMEOUT_SECONDS:-12}
+      # Sentry
+      - SENTRY_DSN=${SENTRY_DSN:-}
+      - SENTRY_ENVIRONMENT=${SENTRY_ENVIRONMENT:-production}
+    volumes:
+      - ./models:/app/models
+      - ./data:/app/data
+      - ./logs:/app/logs
+      - ./outputs:/app/outputs
+    restart: unless-stopped
+    extra_hosts:
+      # Allow container to access host machine
+      - "host.docker.internal:host-gateway"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:${APP_PORT:-7800}/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    networks:
+      - coin-market-network
+
+networks:
+  coin-market-network:
+    driver: bridge

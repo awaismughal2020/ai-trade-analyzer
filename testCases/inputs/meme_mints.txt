@@ -1,0 +1,15 @@
+# Meme token mints - one per line. Lines starting with # are ignored.
+# Edit this file to change the list of tokens to test against POST /predict
+
+6gqRitdpDuQUQ2qim3ZpJweNuahNP9vp8GdLmrfHoLD
+6VQiK6wNoeeQ5osVw2CrQGh5wAoRvJEVMbEQGoWppump
+rdWrAxwJwXaknCxyzbePN787JjiwGuMejotYkWWpump
+5r29DJ3sDxbMtv81A2gv2XQP1HQZYKzqQ27cEVFLpump
+8jiVXftnn2ZG6bugK7HAH5j2G3D6TpsG521gqsWwpump
+4964SXikZQWnCXUoAXQar6tLAv5xRhYS4uQqLUc6pump
+7p9LpWYAPWuzWHAncdgXkU8vdxzqYuo74jgH9UosfQPX
+7zB1fXsrjQY9cKfeuLKfQ4UnB2qiNCedidrp3wCj2k21
+CVrPv5L4pCAvE8Q1o17GgFMBaLC7U4MVvxK5QPq4pump
+8tMovZEGRhB82fnHXqTAExGKpWr217mL59Knk6QQpump
+CDTxbYAh7sdf9Z4pfRcJJDnptZvSCdzrG6zuqGbLbonk
+6AJcP7wuLwmRYLBNbi825wgguaPsWzPBEHcHndpRpump

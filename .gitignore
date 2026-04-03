@@ -7,5 +7,8 @@ marketAnalysis/data/*
 marketAnalysis/plots/*
 marketAnalysis/venv
 marketAnalysis/__pycache__/*
-
+userTransactionAnalysis/__pycache__/*
+userTransactionAnalysis/venv
+userTransactionAnalysis/.env
+.env
 

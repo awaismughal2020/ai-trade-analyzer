@@ -1,0 +1,2 @@
+# Perps symbols - one per line (e.g. BTC-USD, ETH-USD). For future use with token_type=perps.
+# Edit this file when you add perps testing.

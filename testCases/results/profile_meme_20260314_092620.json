@@ -1,0 +1,280 @@
+{
+  "test_type": "profile_meme",
+  "base_url": "http://localhost:8800",
+  "timestamp": "20260314_092620",
+  "count": 4,
+  "results": [
+    {
+      "payload": {
+        "wallet_address": "62qEWURTpb8RNqoPCrjaoRcfU4PneigVKbiuGtin2Wb4",
+        "token_type": "meme",
+        "from_date": "2025-12-14T00:00:00Z",
+        "to_date": "2026-03-14T23:59:59Z"
+      },
+      "response": {
+        "wallet_address": "62qEWURTpb8RNqoPCrjaoRcfU4PneigVKbiuGtin2Wb4",
+        "total_trades": 0,
+        "total_mints_traded": 0,
+        "overall_win_rate": 0.0,
+        "avg_pnl_per_trade": 0.0,
+        "total_realized_pnl": 0.0,
+        "lifetime_pnl": 0.0,
+        "total_volume_usd": 0.0,
+        "max_drawdown_pct": 0.0,
+        "avg_r_multiple": 0.0,
+        "avg_holding_time_minutes": 0.0,
+        "avg_hold_time_hours": 0.0,
+        "typical_entry_phase": "UNKNOWN",
+        "trader_type": "MIXED",
+        "is_sniper": false,
+        "is_holder": false,
+        "is_flipper": false,
+        "fomo_tendency": 0.0,
+        "panic_sell_tendency": 0.0,
+        "dip_buy_tendency": 0.0,
+        "whale_follow_tendency": 0.0,
+        "is_valid": false,
+        "patterns": [
+          {
+            "pattern_type": "UNKNOWN",
+            "occurrences": 0,
+            "win_rate": 0.0,
+            "avg_pnl_percent": 0.0
+          }
+        ],
+        "recommendations": [
+          "Focus on quality over quantity \u2014 wait for higher-probability setups before entering.",
+          "Focus on setups that match your strengths and avoid your weaknesses.",
+          "Be patient and wait for higher-probability setups before entering."
+        ],
+        "current_market_context": {
+          "fear_greed": 16,
+          "fear_greed_change": 1,
+          "altcoin_index": 44,
+          "altcoin_index_change": 0,
+          "btc_dominance": 56.898464,
+          "btc_dominance_change": 0.57,
+          "eth_dominance": 10.1,
+          "eth_dominance_change": 0.9,
+          "total_market_cap": 2483675481090.0,
+          "total_market_cap_change": -1.82,
+          "total_volume_24h": 46954671747.0,
+          "total_volume_24h_change": -7.82,
+          "investment_activity": -35,
+          "active_currencies": 4705,
+          "market_regime": "SIDEWAYS",
+          "market_favorability": 0.16,
+          "is_extreme_fear": false,
+          "is_extreme_greed": false,
+          "is_default": false,
+          "fetched_at": "2026-03-14T09:00:00.166Z"
+        },
+        "token_type": "meme"
+      }
+    },
+    {
+      "payload": {
+        "wallet_address": "FSfiJdsybM4zc1jE2H6hBUjE4epKiTZWoR47SfkNYQFZ",
+        "token_type": "meme",
+        "from_date": "2025-12-14T00:00:00Z",
+        "to_date": "2026-03-14T23:59:59Z"
+      },
+      "response": {
+        "wallet_address": "FSfiJdsybM4zc1jE2H6hBUjE4epKiTZWoR47SfkNYQFZ",
+        "total_trades": 0,
+        "total_mints_traded": 0,
+        "overall_win_rate": 0.0,
+        "avg_pnl_per_trade": 0.0,
+        "total_realized_pnl": 0.0,
+        "lifetime_pnl": 0.0,
+        "total_volume_usd": 0.0,
+        "max_drawdown_pct": 0.0,
+        "avg_r_multiple": 0.0,
+        "avg_holding_time_minutes": 0.0,
+        "avg_hold_time_hours": 0.0,
+        "typical_entry_phase": "UNKNOWN",
+        "trader_type": "MIXED",
+        "is_sniper": false,
+        "is_holder": false,
+        "is_flipper": false,
+        "fomo_tendency": 0.0,
+        "panic_sell_tendency": 0.0,
+        "dip_buy_tendency": 0.0,
+        "whale_follow_tendency": 0.0,
+        "is_valid": false,
+        "patterns": [
+          {
+            "pattern_type": "UNKNOWN",
+            "occurrences": 0,
+            "win_rate": 0.0,
+            "avg_pnl_percent": 0.0
+          }
+        ],
+        "recommendations": [
+          "Focus on quality over quantity \u2014 wait for higher-probability setups before entering.",
+          "Focus on setups that match your strengths and avoid your weaknesses.",
+          "Be patient and wait for higher-probability setups before entering."
+        ],
+        "current_market_context": {
+          "fear_greed": 16,
+          "fear_greed_change": 1,
+          "altcoin_index": 44,
+          "altcoin_index_change": 0,
+          "btc_dominance": 56.898464,
+          "btc_dominance_change": 0.57,
+          "eth_dominance": 10.1,
+          "eth_dominance_change": 0.9,
+          "total_market_cap": 2483675481090.0,
+          "total_market_cap_change": -1.82,
+          "total_volume_24h": 46954671747.0,
+          "total_volume_24h_change": -7.82,
+          "investment_activity": -35,
+          "active_currencies": 4705,
+          "market_regime": "SIDEWAYS",
+          "market_favorability": 0.16,
+          "is_extreme_fear": false,
+          "is_extreme_greed": false,
+          "is_default": false,
+          "fetched_at": "2026-03-14T09:00:00.166Z"
+        },
+        "token_type": "meme"
+      }
+    },
+    {
+      "payload": {
+        "wallet_address": "EzCFopHmWkbm4rwRu8YQwTqNq5oRXQC9KaG8sYqjDQRB",
+        "token_type": "meme",
+        "from_date": "2025-12-14T00:00:00Z",
+        "to_date": "2026-03-14T23:59:59Z"
+      },
+      "response": {
+        "wallet_address": "EzCFopHmWkbm4rwRu8YQwTqNq5oRXQC9KaG8sYqjDQRB",
+        "total_trades": 0,
+        "total_mints_traded": 0,
+        "overall_win_rate": 0.0,
+        "avg_pnl_per_trade": 0.0,
+        "total_realized_pnl": 0.0,
+        "lifetime_pnl": 0.0,
+        "total_volume_usd": 0.0,
+        "max_drawdown_pct": 0.0,
+        "avg_r_multiple": 0.0,
+        "avg_holding_time_minutes": 0.0,
+        "avg_hold_time_hours": 0.0,
+        "typical_entry_phase": "UNKNOWN",
+        "trader_type": "MIXED",
+        "is_sniper": false,
+        "is_holder": false,
+        "is_flipper": false,
+        "fomo_tendency": 0.0,
+        "panic_sell_tendency": 0.0,
+        "dip_buy_tendency": 0.0,
+        "whale_follow_tendency": 0.0,
+        "is_valid": false,
+        "patterns": [
+          {
+            "pattern_type": "UNKNOWN",
+            "occurrences": 0,
+            "win_rate": 0.0,
+            "avg_pnl_percent": 0.0
+          }
+        ],
+        "recommendations": [
+          "Focus on quality over quantity \u2014 wait for higher-probability setups before entering.",
+          "Focus on setups that match your strengths and avoid your weaknesses.",
+          "Be patient and wait for higher-probability setups before entering."
+        ],
+        "current_market_context": {
+          "fear_greed": 16,
+          "fear_greed_change": 1,
+          "altcoin_index": 44,
+          "altcoin_index_change": 0,
+          "btc_dominance": 56.898464,
+          "btc_dominance_change": 0.57,
+          "eth_dominance": 10.1,
+          "eth_dominance_change": 0.9,
+          "total_market_cap": 2483675481090.0,
+          "total_market_cap_change": -1.82,
+          "total_volume_24h": 46954671747.0,
+          "total_volume_24h_change": -7.82,
+          "investment_activity": -35,
+          "active_currencies": 4705,
+          "market_regime": "SIDEWAYS",
+          "market_favorability": 0.16,
+          "is_extreme_fear": false,
+          "is_extreme_greed": false,
+          "is_default": false,
+          "fetched_at": "2026-03-14T09:00:00.166Z"
+        },
+        "token_type": "meme"
+      }
+    },
+    {
+      "payload": {
+        "wallet_address": "62qEWURTpb8RNqoPCrjaoRcfU4PneigVKbiuGtin2Wb4",
+        "token_type": "meme",
+        "from_date": "2025-12-14T00:00:00Z",
+        "to_date": "2026-03-14T23:59:59Z"
+      },
+      "response": {
+        "wallet_address": "62qEWURTpb8RNqoPCrjaoRcfU4PneigVKbiuGtin2Wb4",
+        "total_trades": 0,
+        "total_mints_traded": 0,
+        "overall_win_rate": 0.0,
+        "avg_pnl_per_trade": 0.0,
+        "total_realized_pnl": 0.0,
+        "lifetime_pnl": 0.0,
+        "total_volume_usd": 0.0,
+        "max_drawdown_pct": 0.0,
+        "avg_r_multiple": 0.0,
+        "avg_holding_time_minutes": 0.0,
+        "avg_hold_time_hours": 0.0,
+        "typical_entry_phase": "UNKNOWN",
+        "trader_type": "MIXED",
+        "is_sniper": false,
+        "is_holder": false,
+        "is_flipper": false,
+        "fomo_tendency": 0.0,
+        "panic_sell_tendency": 0.0,
+        "dip_buy_tendency": 0.0,
+        "whale_follow_tendency": 0.0,
+        "is_valid": false,
+        "patterns": [
+          {
+            "pattern_type": "UNKNOWN",
+            "occurrences": 0,
+            "win_rate": 0.0,
+            "avg_pnl_percent": 0.0
+          }
+        ],
+        "recommendations": [
+          "Focus on quality over quantity \u2014 wait for higher-probability setups before entering.",
+          "Focus on setups that match your strengths and avoid your weaknesses.",
+          "Be patient and wait for higher-probability setups before entering."
+        ],
+        "current_market_context": {
+          "fear_greed": 16,
+          "fear_greed_change": 1,
+          "altcoin_index": 44,
+          "altcoin_index_change": 0,
+          "btc_dominance": 56.898464,
+          "btc_dominance_change": 0.57,
+          "eth_dominance": 10.1,
+          "eth_dominance_change": 0.9,
+          "total_market_cap": 2483675481090.0,
+          "total_market_cap_change": -1.82,
+          "total_volume_24h": 46954671747.0,
+          "total_volume_24h_change": -7.82,
+          "investment_activity": -35,
+          "active_currencies": 4705,
+          "market_regime": "SIDEWAYS",
+          "market_favorability": 0.16,
+          "is_extreme_fear": false,
+          "is_extreme_greed": false,
+          "is_default": false,
+          "fetched_at": "2026-03-14T09:00:00.166Z"
+        },
+        "token_type": "meme"
+      }
+    }
+  ]
+}
